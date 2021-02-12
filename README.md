@@ -1,45 +1,106 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# My Bucket List
 
-Welcome USER_NAME,
+**YourForceGym** site: [visit here](https://diogo-pessoa.github.io/MyBucketList/index.html)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+This is a fun project to create your bucket List and stopping post-poning your plans and adventures.
 
-## Gitpod Reminders
+Make a list, tag places around user wants to go, and set a date to make it happen.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+---
 
-`python3 -m http.server`
+## Project Work 
 
-A blue button should appear to click: *Make Public*,
+Project Board & and User Stories: tracking on [Trello](https://trello.com/b/dE5REmeS)
 
-Another blue button should appear to click: *Open Browser*.
+---
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## UX
 
-A blue button should appear to click: *Make Public*,
+The focus is to give user a friendly and intuitive interface. Then the focus is on making the list of places to places to go.
 
-Another blue button should appear to click: *Open Browser*.
+There's three Fields:
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Action (goal), a text field.
 
-## Updates Since The Instructional Video
+Location - should have a Map feature integrated to add a maps link to the list.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Calendar field - to feed the list with a date.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Once the user submit the form the Object is appended to the list, 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+Once the user submits at least one item, a `button` to e-mail the list to the user. 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+##### Mobile view
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![Mobile View](https://github.com/diogo-pessoa/MyBucketList/blob/master/wireframes/MobileView.png)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+###### Desktop view
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+![Desktop View](https://github.com/diogo-pessoa/MyBucketList/blob/master/wireframes/DesktopView.png)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Features
 
---------
+<WIP>
 
-Happy coding!
+---
+ 
+### Existing Features
+<WIP>
+
+---
+
+### Features Left to Implement
+ <WIP>
+
+## Technologies Used
+
+This Project is built with HTML5/CSS3 with the extra enhancement being provided by the list below:
+
+- [Bootstrap](https://getbootstrap.com/) - for it's handy Grid system 
+- [fontawesome](https://fontawesome.com/) - for all the cool icon throughout the pages
+- [githubPages](https://pages.github.com/) - for the Deployment of this project unde my github-io space.
+- [Jquery]() - Interactive Javascript
+
+## Testing
+
+Manual site navigation on different screen sizes and browsers. 
+
+- Selected browsers were Firefox and Chrome. 
+
+Screen sizes tested: 
+
+col-sm - Iphone6/7/8:  375px x667px
+col-md - Ipad: 768px x 1024px
+col-lg - Ipad: >960px x >600px
+
+Tested both on Browser developer tools &  available devices. 
+
+#### Static Content checks
+- [W3C HTML Validator](https://validator.w3.org/)
+- [W3C CSS Validator](http://jigsaw.w3.org/css-validator/validator$link)
+- Chrome Developer tools lighthouse 
+
+
+## Deployment
+
+site deployed using github-pages. Github pages is enabled on the repostiory settings all the steps are well described [here](https://pages.github.com/). Once code Is commited to master and github-pages is enabled on the repository project will be availble.
+
+## local development
+
+Code Editor [Vscode](https://code.visualstudio.com/) and Chrome browser with developer tools.
+
+---
+
+## Credits
+
+### Content
+
+bootstrap theme from: [bootswatch](https://bootswatch.com/journal/) under MIT license
+
+### Media
+
+
+### Acknowledgements
+
+Notepad css background inspired in [css_tricks](https://css-tricks.com/how-to-create-a-notebook-design-with-css/)
+

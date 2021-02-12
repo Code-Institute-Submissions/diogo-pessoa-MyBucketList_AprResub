@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>My Bucket List</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                        <a class="navbar-brand hand-font" href="index.html">My Bucket List <i class="fa fa-pencil-square-o"></i></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Write your own Bucket List</h1>
+                        <p class="lead"></p>
+                        <hr class="my-4">
+                        <p>What is a bucket list?</p>
+                        <p id="collapse-bucketList-info" class="my-4">
+                            it is a collection of goals, dreams and aspirations that you would like to accomplish within your lifetime. The basic meaning of a bucket list is to keep track of your goals and to take steps to achieving these goals in order to maximize the experiences in your life.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col">
+                    <form>
+                        <fieldset>
+                            <legend>Create your bucketList</legend>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="item" placeholder="What's your goal? ex: fly a plane">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control-sm d-inline-block" id="location"
+                                    placeholder="Have a location in mind?"></input>
+                                <label for="planned-date">set a date?</label>
+                                <input class="form-control-sm d-inline-block" type="date" id="start" name="planned-date"
+                                value="2021-01-01"
+                                min="2021-06-01">
+                            </div>
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Add to bucket list</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="container-fluid">
+                <div class="row notes">
+                    <div class="col lines">
+                        <div class="row">
+                            <h4 class="col">My Bucket List:</h4>
+                        </div>
+                        <div class="row">
+                        <div class="lines"></div>
+                            <ul class="list">
+                                <li> Add your first Item</li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <button id="send-list-by-email" type="button" class="btn btn-secondary" hidden>email me this list</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <footer></footer>
+</body>
+
+</html>

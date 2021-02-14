@@ -25,7 +25,7 @@ $('#add-bucketlist-item-form').submit(function(e) {
 
 /**
  * Append your goal to your Bucket List
- * @param {*} bucketListItem
+ * @param {Object} bucketListItem
  */
 function AddItemToBucketList(bucketListItem) {
   let newItem = `<li>${bucketListItem['action']}`
@@ -33,8 +33,8 @@ function AddItemToBucketList(bucketListItem) {
     newItem += `, ${bucketListItem['location']}`
   }
   if (bucketListItem['datePlanned']) {
-    // TODO make date human readable
-    newItem += `, ${bucketListItem['datePlanned']}`
+    const DateForAction = formatDate(bucketListItem['datePlanned'])
+    newItem += `, ${DateForAction}`
   }
   newItem += `.</li>`
   /* remove first sample Item */
@@ -57,4 +57,12 @@ function removeEmptyLines() {
   if (firstItem === 'Add your first Item') {
     $('.removed-on-first-iteraction').remove();
   }
+}
+
+/**
+ * converts date format to better alignment with handwritten item
+ * @param {String} plannedDate 
+ */
+function formatDate(plannedDate) {
+  return new Date(plannedDate).toDateString()
 }

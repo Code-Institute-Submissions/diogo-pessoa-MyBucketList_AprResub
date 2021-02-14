@@ -104,3 +104,4 @@ bootstrap theme from: [bootswatch](https://bootswatch.com/journal/) under MIT li
 
 Notepad css background inspired in [css_tricks](https://css-tricks.com/how-to-create-a-notebook-design-with-css/)
 
+The official [JQuery documentation](https://api.jquery.com/) as a constant source.

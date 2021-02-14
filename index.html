@@ -17,9 +17,9 @@
     <header>
         <div class="container-fluid">
             <div class="row">
-                <div class="col">
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                        <a class="navbar-brand hand-font" href="index.html">My Bucket List <i class="fa fa-pencil-square-o"></i></a>
+                <div class="col-sm">
+                    <nav class="navbar navbar-expand-sm navbar-expand-lg navbar-dark bg-primary">
+                        <a class="navbar-brand" href="index.html">My Bucket List <i class="fa fa-pencil-square-o"></i></a>
                     </nav>
                 </div>
             </div>
@@ -31,11 +31,11 @@
                 <div class="col">
                     <div class="jumbotron">
                         <h1 class="display-4">Write your own Bucket List</h1>
-                        <p class="lead"></p>
                         <hr class="my-4">
-                        <p>What is a bucket list?</p>
-                        <p id="collapse-bucketList-info" class="my-4">
-                            it is a collection of goals, dreams and aspirations that you would like to accomplish within your lifetime. The basic meaning of a bucket list is to keep track of your goals and to take steps to achieving these goals in order to maximize the experiences in your life.
+                        <h5 id="bucketlist-description">What is a bucket list? <i class="fa fa-info-circle"></i></h5>
+                        <p id="collapse-bucketList-info" class="lead">
+                            It is a collection of goals, dreams and aspirations that you would like to accomplish within your lifetime. 
+                            The basic meaning of a bucket list is to keep track of your goals and to take steps to achieving these goals in order to maximize the experiences in your life.
                         </p>
 
                     </div>
@@ -44,21 +44,20 @@
             <hr class="my-4">
             <div class="row">
                 <div class="col">
-                    <form>
+                    <form id="add-bucketlist-item-form" action="javascript:alert( 'item included on your list!' );">
                         <fieldset>
                             <legend>Create your bucketList</legend>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="item" placeholder="What's your goal? ex: fly a plane">
+                                <input type="text" class="form-control" id="bucketlist-item" placeholder="What's your goal? ex: fly a plane">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control-sm d-inline-block" id="location"
+                                <label for="planned-date">Location</label>
+                                <input type="text" class="form-control-sm d-sm-block d-md-inline" id="location"
                                     placeholder="Have a location in mind?"></input>
-                                <label for="planned-date">set a date?</label>
-                                <input class="form-control-sm d-inline-block" type="date" id="start" name="planned-date"
-                                value="2021-01-01"
-                                min="2021-06-01">
+                                <label for="planned-date">Set a date?</label>
+                                <input class="form-control-sm d-sm-block d-sm-block d-md-inline" type="date" id="date-planned" name="planned-date">
                             </div>
-                            <button type="button" class="btn btn-primary btn-lg btn-block">Add to bucket list</button>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Add to bucket list</button>
                     </form>
                 </div>
             </div>
@@ -71,8 +70,10 @@
                         </div>
                         <div class="row">
                         <div class="lines"></div>
-                            <ul class="list">
-                                <li> Add your first Item</li>
+                        <!-- TODO maybe Show Number on ordered list -->
+                            <ul id="bucketList" class="list">
+                                <li class='removed-on-first-iteraction'>Add your first Item</li>
+                                <li></li>
                                 <li></li>
                                 <li></li>
                                 <li></li>
@@ -86,9 +87,8 @@
             </div>
         </div>
     </section>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/index.js"></script>
     <footer></footer>
 </body>
 

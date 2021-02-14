@@ -36,7 +36,7 @@ function AddItemToBucketList(bucketListItem) {
     const DateForAction = formatDate(bucketListItem['datePlanned'])
     newItem += `, ${DateForAction}`
   }
-  newItem += `.</li>`
+  newItem += `<i class="removeListItem fa fa-times-circle"></i></li>`
   /* remove first sample Item */
   removeEmptyLines()
   /* Add Item to list */
@@ -66,3 +66,11 @@ function removeEmptyLines() {
 function formatDate(plannedDate) {
   return new Date(plannedDate).toDateString()
 }
+
+/**
+ *  remove Itemfrom list
+ */
+$('ul').on('click', '.removeListItem', function() {
+  // do something
+  $(this).parent().remove()
+});

@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-sm">
                     <nav class="navbar navbar-expand-sm navbar-expand-lg navbar-dark bg-primary">
-                        <a class="navbar-brand" href="index.html">My Bucket List <i class="fa fa-pencil-square-o"></i></a>
+                        <a class="navbar-brand" href="index.html">My BucketList <i class="fa fa-pencil-square-o"></i></a>
                     </nav>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                                 <input type="text" class="form-control" id="bucketlist-item" placeholder="What's your goal? ex: fly a plane">
                             </div>
                             <div class="form-group">
-                                <label for="planned-date">Location</label>
+                                <label for="location">Location</label>
                                 <input type="text" class="form-control-sm d-sm-block d-md-inline" id="location"
                                     placeholder="Have a location in mind?"></input>
                                 <label for="planned-date">Set a date?</label>
@@ -70,9 +70,8 @@
                         </div>
                         <div class="row">
                         <div class="lines"></div>
-                        <!-- TODO maybe Show Number on ordered list -->
                             <ul id="bucketList" class="list">
-                                <li class='removed-on-first-iteraction'>Add your first Item</li>
+                                <li class='removed-on-first-iteraction'>Add your first Item <i class="removeListItem fa fa-times-circle"></i></li>
                                 <li></li>
                                 <li></li>
                                 <li></li>
@@ -87,7 +86,10 @@
             </div>
         </div>
     </section>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="assets/js/index.js"></script>
     <footer></footer>
 </body>

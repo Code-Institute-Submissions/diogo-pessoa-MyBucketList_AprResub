@@ -59,7 +59,8 @@ This Project is built with HTML5/CSS3 with the extra enhancement being provided 
 - [Bootstrap](https://getbootstrap.com/) - for it's handy Grid system 
 - [fontawesome](https://fontawesome.com/) - for all the cool icon throughout the pages
 - [githubPages](https://pages.github.com/) - for the Deployment of this project unde my github-io space.
-- [Jquery]() - Interactive Javascript
+- [JQuery](https://jquery.com/) - Interactive Javascript
+- [JQueryUI](https://learn.jquery.com/jquery-ui/)
 
 ## Testing
 
@@ -95,13 +96,13 @@ Code Editor [Vscode](https://code.visualstudio.com/) and Chrome browser with dev
 
 ### Content
 
-bootstrap theme from: [bootswatch](https://bootswatch.com/journal/) under MIT license
+- bootstrap theme from: [bootswatch](https://bootswatch.com/journal/) under MIT license
+
+- [Bootstrap toast](https://getbootstrap.com/docs/4.2/components/toasts/)
+- Notepad css background inspired in [css_tricks](https://css-tricks.com/how-to-create-a-notebook-design-with-css/)
 
 ### Media
 
 
 ### Acknowledgements
-
-Notepad css background inspired in [css_tricks](https://css-tricks.com/how-to-create-a-notebook-design-with-css/)
-
 The official [JQuery documentation](https://api.jquery.com/) as a constant source.

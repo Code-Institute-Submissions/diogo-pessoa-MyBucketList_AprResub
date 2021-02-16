@@ -20,6 +20,8 @@ $('#add-bucketlist-item-form').submit(function(e) {
   }
   if (bucketListItem['action']) {
     AddItemToBucketList(bucketListItem)
+  } else {
+    showToast();
   }
 });
 
@@ -53,8 +55,7 @@ function removeEmptyLines() {
     lastLine.remove();
   }
 
-  let firstItem = $('.removed-on-first-iteraction').text()
-  if (firstItem === 'Add your first Item') {
+  if ($('.removed-on-first-iteraction')) {
     $('.removed-on-first-iteraction').remove();
   }
 }
@@ -74,3 +75,39 @@ $('ul').on('click', '.removeListItem', function() {
   // do something
   $(this).parent().remove()
 });
+
+
+/**
+ *  Re-order List Item
+ * using Jquery-UI library
+ */
+
+$('#bucketList').sortable();  
+$('#bucketList').disableSelection();
+
+
+/**
+ * Adds a toast warning in case goals field is not filled
+ */
+function showToast() {
+
+  let toast = `<!-- Then put toasts within -->
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="..." class="rounded mr-2" alt="...">
+        <strong class="mr-auto">My BucketList</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">
+        Your goal is empty.
+      </div>
+    </div>`
+
+    $(toast).appendTo('form');
+
+  $('.toast').toast('show');
+}
+
+// TODO WARN when form goal field is empty is empty 

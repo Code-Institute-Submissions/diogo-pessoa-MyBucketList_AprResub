@@ -57,3 +57,7 @@ h4 {
     height:fit-content;
     margin-left: 3rem;
 }
+
+#send-list-by-email {
+    margin: auto;
+}

@@ -43,14 +43,9 @@ Once the user submits at least one item, a `button` to e-mail the list to the us
 <WIP>
 
 ---
- 
-### Existing Features
-<WIP>
-
----
 
 ### Features Left to Implement
- <WIP>
+- Add Maps Integration with the input Location, to build an href for the user's Bucket list Item.
 
 ## Technologies Used
 
@@ -61,6 +56,7 @@ This Project is built with HTML5/CSS3 with the extra enhancement being provided 
 - [githubPages](https://pages.github.com/) - for the Deployment of this project unde my github-io space.
 - [JQuery](https://jquery.com/) - Interactive Javascript
 - [JQueryUI](https://learn.jquery.com/jquery-ui/)
+- [emailJs](https://www.emailjs.com/)
 
 ## Testing
 

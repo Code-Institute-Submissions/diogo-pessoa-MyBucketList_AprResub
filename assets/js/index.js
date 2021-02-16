@@ -21,7 +21,9 @@ $('#add-bucketlist-item-form').submit(function(e) {
   if (bucketListItem['action']) {
     AddItemToBucketList(bucketListItem)
   } else {
-    showToast();
+    const message = 'Your goal is empty.'
+    const id = '#add-bucketlist-item-form'
+    showToast(message, id);
   }
 });
 
@@ -43,6 +45,7 @@ function AddItemToBucketList(bucketListItem) {
   removeEmptyLines()
   /* Add Item to list */
   $('#bucketList').prepend(newItem);
+  $('#send-list-by-email').removeAttr('hidden');
 }
 
 /**
@@ -110,4 +113,58 @@ function showToast() {
   $('.toast').toast('show');
 }
 
-// TODO WARN when form goal field is empty is empty 
+/**
+ * Parses BucketList of at least one item into friendly format to email user.
+ */
+function parseBucketList() {
+  // TODO function to parse List Content
+}
+
+// TODO test function
+// TODO scroll window to center the email form
+// TODO adding button to hide email form again if the user changes his mind
+/**
+ * Event Listener for send email button show email form and hides send-list button
+ * 
+ */
+$('#send-list-by-email').on('click', function () {
+  console.log('Replacing button with form')
+  $(this).siblings('div').removeAttr('hidden');
+  $(this).hide()   
+});
+
+
+/**
+ * Email form Submit handled here 
+ */
+$('#emailDetails').submit(function(e) {
+  e.preventDefault();
+  const emailDetails = {
+    'name': $("#username").val() || null,
+    'email': $("#inputEmail").val() || null,
+    'bucketList': parseBucketList(),
+  }
+  console.log(emailDetails) // TODO function WIP
+  if (emailDetails['username']) {
+  //   console.log('sending Email, but no really')
+  //   // sendEmail(emailDetails)
+  } else {
+    const message = 'Check your added details'
+    const id = '#emailDetails'
+    showToast(message, id);  // TODO bug Toast Shows in both 
+  }
+});
+
+// TODO emailJs email my list
+/**
+ * Receives a data obejct with email, name and list and calls emailJS Api.
+ * @param {Object} data 
+ */
+function sendEmail(data) {
+  emailjs.init('user_ON7XddmWkEX1msv4OfqwC');
+  emailjs.send("service_leir2b4","template_z8rftx6",{
+    email: `${data['email']}`,
+    to_name: `${data['name']}`,
+    message: `${data['list']}`,
+    });  
+}

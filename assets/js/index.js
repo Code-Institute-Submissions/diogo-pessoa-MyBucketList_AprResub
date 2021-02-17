@@ -75,8 +75,14 @@ function formatDate(plannedDate) {
  *  remove Item from list
  */
 $('ul').on('click', '.removeListItem', function() {
-  // do something
+  // removes li element from bucketList
   $(this).parent().remove()
+  // hides email form and button
+  if ($('#bucketList').children('li').length == 0 ) {
+    console.log('hide email button and form')
+    $('#send-list-by-email').attr('hidden', '');
+    $('#emailDetails').parent().attr('hidden', '');
+  }
 });
 
 
@@ -130,8 +136,8 @@ function parseBucketList() {
  */
 $('#send-list-by-email').on('click', function () {
   console.log('Replacing button with form')
-  $(this).siblings('div').removeAttr('hidden');
-  $(this).hide()   
+  $('#emailDetails').parent().removeAttr('hidden');
+  $(this).attr('hidden', '');
 });
 
 

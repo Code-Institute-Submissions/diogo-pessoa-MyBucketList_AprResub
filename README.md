@@ -46,6 +46,7 @@ Once the user submits at least one item, a `button` to e-mail the list to the us
 
 ### Features Left to Implement
 - Add Maps Integration with the input Location, to build an href for the user's Bucket list Item.
+- Use background image on My bucket list `ul` element and align items with it for a more natural view
 
 ## Technologies Used
 

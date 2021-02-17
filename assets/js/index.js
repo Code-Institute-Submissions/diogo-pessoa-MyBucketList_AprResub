@@ -8,7 +8,7 @@ $('#bucketlist-description').click(function(e) {
 });
 
 /**
- * Form submit
+ * bucketList Form submit
  */
 
 $('#add-bucketlist-item-form').submit(function(e) {
@@ -72,7 +72,7 @@ function formatDate(plannedDate) {
 }
 
 /**
- *  remove Itemfrom list
+ *  remove Item from list
  */
 $('ul').on('click', '.removeListItem', function() {
   // do something
@@ -93,23 +93,19 @@ $('#bucketList').disableSelection();
  * Adds a toast warning in case goals field is not filled
  */
 function showToast() {
-
-  let toast = `<!-- Then put toasts within -->
-  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header">
-        <img src="..." class="rounded mr-2" alt="...">
-        <strong class="mr-auto">My BucketList</strong>
-        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="toast-body">
-        Your goal is empty.
-      </div>
-    </div>`
-
-    $(toast).appendTo('form');
-
+  let toast = `<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                  <div class="toast-header">
+                    <img src="..." class="rounded mr-2" alt="...">
+                    <strong class="mr-auto">My BucketList</strong>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="toast-body">
+                    Your goal is empty.
+                  </div>
+                </div>`
+  $(toast).appendTo('form');
   $('.toast').toast('show');
 }
 
@@ -117,12 +113,17 @@ function showToast() {
  * Parses BucketList of at least one item into friendly format to email user.
  */
 function parseBucketList() {
-  // TODO function to parse List Content
+  let stringBucketList = ``;
+  const htmlBucketList = $('#bucketList').children('li')
+  let order = 0
+  for (const liElement of htmlBucketList) {
+    if(liElement.innerText) {
+      stringBucketList += `${++order} - ${liElement.innerText};\n`;  
+    }
+  }
+  return stringBucketList;
 }
 
-// TODO test function
-// TODO scroll window to center the email form
-// TODO adding button to hide email form again if the user changes his mind
 /**
  * Event Listener for send email button show email form and hides send-list button
  * 
@@ -144,18 +145,22 @@ $('#emailDetails').submit(function(e) {
     'email': $("#inputEmail").val() || null,
     'bucketList': parseBucketList(),
   }
-  console.log(emailDetails) // TODO function WIP
-  if (emailDetails['username']) {
-  //   console.log('sending Email, but no really')
-  //   // sendEmail(emailDetails)
+  if (emailDetails['name'] && emailDetails['email']) {
+    if (emailDetails['emailDetails']) {
+      sendEmail(emailDetails)  
+    } else {
+        //  email button is hidden, this condition should never be met.
+        // still we refuse to email an empty list to user.
+        alert('BucketList is empty, refusing to send email. Please report this issue, details are on page footer')
+    }
+    
   } else {
     const message = 'Check your added details'
     const id = '#emailDetails'
-    showToast(message, id);  // TODO bug Toast Shows in both 
+    alert('missing either username or email ')
   }
 });
 
-// TODO emailJs email my list
 /**
  * Receives a data obejct with email, name and list and calls emailJS Api.
  * @param {Object} data 
@@ -165,6 +170,6 @@ function sendEmail(data) {
   emailjs.send("service_leir2b4","template_z8rftx6",{
     email: `${data['email']}`,
     to_name: `${data['name']}`,
-    message: `${data['list']}`,
-    });  
+    message: `${data['bucketList']}`,
+    });
 }

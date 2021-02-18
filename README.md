@@ -10,7 +10,7 @@ Make a list, tag places around user wants to go, and set a date to make it happe
 
 ## Project Work 
 
-Project Board & and User Stories: tracking on [Trello](https://trello.com/b/dE5REmeS)
+Project Board & and User Stories: tracking on [Trello](https://trello.com/b/IdBaRAf3)
 
 ---
 
@@ -32,11 +32,11 @@ Once the user submits at least one item, a `button` to e-mail the list to the us
 
 ##### Mobile view
 
-![Mobile View](https://github.com/diogo-pessoa/MyBucketList/blob/master/wireframes/MobileView.png)
+![Mobile View](https://github.com/diogo-pessoa/MyBucketList/blob/master/wireframes/Mobile_view.png)
 
 ###### Desktop view
 
-![Desktop View](https://github.com/diogo-pessoa/MyBucketList/blob/master/wireframes/DesktopView.png)
+![Desktop View](https://github.com/diogo-pessoa/MyBucketList/blob/master/wireframes/Desktop_Version.png)
 
 ## Features
 

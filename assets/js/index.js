@@ -21,7 +21,7 @@ $('#add-bucketlist-item-form').submit(function(e) {
   if (bucketListItem['action']) {
     AddItemToBucketList(bucketListItem)
   } else {
-    showToast(message, id);
+    alert('Missing an goal on this Item!');
   }
 });
 
@@ -43,7 +43,9 @@ function AddItemToBucketList(bucketListItem) {
   removeEmptyLines()
   /* Add Item to list */
   $('#bucketList').prepend(newItem);
-  $('#send-list-by-email').removeAttr('hidden');
+  if ($('#emailDetails').parent().attr('hidden')) {
+    $('#send-list-by-email').removeAttr('hidden');
+  }
 }
 
 /**
@@ -92,17 +94,16 @@ $('ul').on('click', '.removeListItem', function() {
 $('#bucketList').sortable();  
 $('#bucketList').disableSelection();
 
-
 /**
  * Adds a toast warning in case goals field is not filled
  */
 function showToast() {
   let toast = `<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                   <div class="toast-body">
-                    Your goal is empty.
+                    Email sent. Enjoy ticking items off this list!
                   </div>
                 </div>`
-  $(toast).appendTo('form');
+  $(toast).appendTo('#emailDetails');
   $('.toast').toast('show');
 }
 
@@ -115,7 +116,7 @@ function parseBucketList() {
   let order = 0
   for (const liElement of htmlBucketList) {
     if(liElement.innerText) {
-      stringBucketList += `${++order} - ${liElement.innerText};\n`;  
+      stringBucketList += `${++order} - ${liElement.innerText}; `;  
     }
   }
   return stringBucketList;
@@ -147,8 +148,10 @@ $('#emailDetails').submit(function(e) {
     'bucketList': parseBucketList(),
   }
   if (emailDetails['name'] && emailDetails['email']) {
-    if (emailDetails['emailDetails']) {
-      sendEmail(emailDetails)  
+    if (emailDetails['bucketList']) {
+      sendEmail(emailDetails)
+      // TODO pop email sent message
+      showToast()
     } else {
         //  email button is hidden, this condition should never be met.
         // still we refuse to email an empty list to user.

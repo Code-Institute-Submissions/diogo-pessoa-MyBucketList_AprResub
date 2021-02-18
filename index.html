@@ -30,14 +30,13 @@
             <div class="row">
                 <div class="col">
                     <div class="jumbotron">
-                        <h1 class="display-4"> Write Your Bucket List</h1>
+                        <h2 class="display-4"> Write Your Bucket List</h2>
                         <hr class="my-4">
                         <h5 id="bucketlist-description">What is a bucket list? <i class="fa fa-info-circle"></i></h5>
                         <p id="collapse-bucketList-info" class="lead">
                             It is a collection of goals, dreams and aspirations that you would like to accomplish within your lifetime. 
                             The basic meaning of a bucket list is to keep track of your goals and to take steps to achieving these goals in order to maximize the experiences in your life.
                         </p>
-
                     </div>
                 </div>
             </div>
@@ -53,11 +52,12 @@
                             <div class="form-group">
                                 <label for="location">Location</label>
                                 <input type="text" class="form-control-sm d-sm-block d-md-inline" id="location"
-                                    placeholder="Have a location in mind?"></input>
-                                <label for="planned-date">Set a date?</label>
-                                <input class="form-control-sm d-sm-block d-sm-block d-md-inline" type="date" id="date-planned" name="planned-date">
+                                    placeholder="Have a location in mind?">
+                                <label for="date-planned">Set a date?</label>
+                                <input class="form-control-sm d-sm-block d-sm-block d-md-inline" type="date" id="date-planned" name="date-planned">
                             </div>
                             <button type="submit" class="btn btn-primary btn-lg btn-block">Add to bucket list</button>
+                        </fieldset>
                     </form>
                 </div>
             </div>
@@ -81,13 +81,13 @@
                     <button hidden id="send-list-by-email" type="submit" class="btn btn-secondary btn-md btn-primary">Email me this List</button>
                     <div hidden class="col-sm col-md-10 col-lg-10">
                         <form id='emailDetails'>
-                              <legend>Enter Details</legend>
+                              <h3>Enter Details</h3>
                               <div class="form-group">
                                 <label for="username">YourName</label>
                                 <input type="text" class="form-control" id="username" placeholder="Name" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIUlEQVQ4EX2TOYhTURSG87IMihDsjGghBhFBmHFDHLWwSqcikk4RRKJgk0KL7C8bMpWpZtIqNkEUl1ZCgs0wOo0SxiLMDApWlgOPrH7/5b2QkYwX7jvn/uc//zl3edZ4PPbNGvF4fC4ajR5VrNvt/mo0Gr1ZPOtfgWw2e9Lv9+chX7cs64CS4Oxg3o9GI7tUKv0Q5o1dAiTfCgQCLwnOkfQOu+oSLyJ2A783HA7vIPLGxX0TgVwud4HKn0nc7Pf7N6vV6oZHkkX8FPG3uMfgXC0Wi2vCg/poUKGGcagQI3k7k8mcp5slcGswGDwpl8tfwGJg3xB6Dvey8vz6oH4C3iXcFYjbwiDeo1KafafkC3NjK7iL5ESFGQEUF7Sg+ifZdDp9GnMF/KGmfBdT2HCwZ7TwtrBPC7rQaav6Iv48rqZwg+F+p8hOMBj0IbxfMdMBrW5pAVGV/ztINByENkU0t5BIJEKRSOQ3Aj+Z57iFs1R5NK3EQS6HQqF1zmQdzpFWq3W42WwOTAf1er1PF2USFlC+qxMvFAr3HcexWX+QX6lUvsKpkTyPSEXJkw6MQ4S38Ljdbi8rmM/nY+CvgNcQqdH6U/xrYK9t244jZv6ByUOSiDdIfgBZ12U6dHEHu9TpdIr8F0OP692CtzaW/a6y3y0Wx5kbFHvGuXzkgf0xhKnPzA4UTyaTB8Ph8AvcHi3fnsrZ7Wore02YViqVOrRXXPhfqP8j6MYlawoAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">          
                               </div>
                               <div class="form-group">
-                                <label for="InputEmail">Email address</label>
+                                <label for="inputEmail">Email address</label>
                                 <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter valid email: email@example.com" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                               </div>
@@ -103,8 +103,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
     <script src="assets/js/index.js"></script>
     <footer>

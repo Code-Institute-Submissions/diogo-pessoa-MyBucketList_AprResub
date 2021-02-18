@@ -17,9 +17,9 @@ $('#add-bucketlist-item-form').submit(function(e) {
     'action': $("#bucketlist-item").val(),
     'location': $("#location").val() || null,
     'datePlanned': $("#date-planned").val() || null
-  }
-  if (bucketListItem['action']) {
-    AddItemToBucketList(bucketListItem)
+  };
+  if (bucketListItem.action) {
+    AddItemToBucketList(bucketListItem);
   } else {
     alert('Missing an goal on this Item!');
   }
@@ -30,17 +30,17 @@ $('#add-bucketlist-item-form').submit(function(e) {
  * @param {Object} bucketListItem
  */
 function AddItemToBucketList(bucketListItem) {
-  let newItem = `<li>${bucketListItem['action']}`
-  if (bucketListItem['location']) {
-    newItem += `, ${bucketListItem['location']}`
+  let newItem = `<li>${bucketListItem.action}`;
+  if (bucketListItem.location) {
+    newItem += `, ${bucketListItem.location}`;
   }
-  if (bucketListItem['datePlanned']) {
-    const DateForAction = formatDate(bucketListItem['datePlanned'])
-    newItem += `, ${DateForAction}`
+  if (bucketListItem.datePlanned) {
+    const DateForAction = formatDate(bucketListItem.datePlanned);
+    newItem += `, ${DateForAction}`;
   }
-  newItem += `<i class="removeListItem fa fa-times-circle"></i></li>`
+  newItem += `<i class="removeListItem fa fa-times-circle"></i></li>`;
   /* remove first sample Item */
-  removeEmptyLines()
+  removeEmptyLines();
   /* Add Item to list */
   $('#bucketList').prepend(newItem);
   if ($('#emailDetails').parent().attr('hidden')) {
@@ -68,7 +68,7 @@ function removeEmptyLines() {
  * @param {String} plannedDate 
  */
 function formatDate(plannedDate) {
-  return new Date(plannedDate).toDateString()
+  return new Date(plannedDate).toDateString();
 }
 
 /**
@@ -76,10 +76,10 @@ function formatDate(plannedDate) {
  */
 $('ul').on('click', '.removeListItem', function() {
   // removes li element from bucketList
-  $(this).parent().remove()
+  $(this).parent().remove();
   // hides email form and button
   if ($('#bucketList').children('li').length == 0 ) {
-    console.log('hide email button and form')
+    console.log('hide email button and form');
     $('#send-list-by-email').attr('hidden', '');
     $('#emailDetails').parent().attr('hidden', '');
   }
@@ -102,7 +102,7 @@ function showToast() {
                   <div class="toast-body">
                     Email sent. Enjoy ticking items off this list!
                   </div>
-                </div>`
+                </div>`;
   $(toast).appendTo('#emailDetails');
   $('.toast').toast('show');
 }
@@ -112,8 +112,8 @@ function showToast() {
  */
 function parseBucketList() {
   let stringBucketList = ``;
-  const htmlBucketList = $('#bucketList').children('li')
-  let order = 0
+  const htmlBucketList = $('#bucketList').children('li');
+  let order = 0;
   for (const liElement of htmlBucketList) {
     if(liElement.innerText) {
       stringBucketList += `${++order} - ${liElement.innerText}; `;  
@@ -127,7 +127,6 @@ function parseBucketList() {
  * 
  */
 $('#send-list-by-email').on('click', function () {
-  console.log('Replacing button with form')
   $('#emailDetails').parent().removeAttr('hidden');
   $(this).attr('hidden', '');
   //scroll to form
@@ -146,22 +145,21 @@ $('#emailDetails').submit(function(e) {
     'name': $("#username").val() || null,
     'email': $("#inputEmail").val() || null,
     'bucketList': parseBucketList(),
-  }
-  if (emailDetails['name'] && emailDetails['email']) {
-    if (emailDetails['bucketList']) {
-      sendEmail(emailDetails)
-      // TODO pop email sent message
-      showToast()
+  };
+  if (emailDetails.name && emailDetails.email) {
+    if (emailDetails.bucketList) {
+      sendEmail(emailDetails);
+      showToast();
     } else {
         //  email button is hidden, this condition should never be met.
         // still we refuse to email an empty list to user.
-        alert('BucketList is empty, refusing to send email. Please report this issue, details are on page footer')
+        alert('BucketList is empty, refusing to send email. Please report this issue, details are on page footer');
     }
     
   } else {
-    const message = 'Check your added details'
-    const id = '#emailDetails'
-    alert('missing either username or email ')
+    const message = 'Check your added details';
+    const id = '#emailDetails';
+    alert('missing either username or email ');
   }
 });
 
@@ -172,8 +170,8 @@ $('#emailDetails').submit(function(e) {
 function sendEmail(data) {
   emailjs.init('user_ON7XddmWkEX1msv4OfqwC');
   emailjs.send("service_leir2b4","template_z8rftx6",{
-    email: `${data['email']}`,
-    to_name: `${data['name']}`,
-    message: `${data['bucketList']}`,
+    email: `${data.email}`,
+    to_name: `${data.name}`,
+    message: `${data.bucketList}`,
     });
 }

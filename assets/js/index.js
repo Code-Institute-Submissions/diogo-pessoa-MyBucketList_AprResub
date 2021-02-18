@@ -21,8 +21,6 @@ $('#add-bucketlist-item-form').submit(function(e) {
   if (bucketListItem['action']) {
     AddItemToBucketList(bucketListItem)
   } else {
-    const message = 'Your goal is empty.'
-    const id = '#add-bucketlist-item-form'
     showToast(message, id);
   }
 });
@@ -100,13 +98,6 @@ $('#bucketList').disableSelection();
  */
 function showToast() {
   let toast = `<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                  <div class="toast-header">
-                    <img src="..." class="rounded mr-2" alt="...">
-                    <strong class="mr-auto">My BucketList</strong>
-                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
                   <div class="toast-body">
                     Your goal is empty.
                   </div>
@@ -138,6 +129,10 @@ $('#send-list-by-email').on('click', function () {
   console.log('Replacing button with form')
   $('#emailDetails').parent().removeAttr('hidden');
   $(this).attr('hidden', '');
+  //scroll to form
+  $('html').stop().animate({
+    'scrollTop': $('#emailDetails').offset().top
+}, 800, 'swing');
 });
 
 

@@ -95,7 +95,7 @@ $('#bucketList').sortable();
 $('#bucketList').disableSelection();
 
 /**
- * Adds a toast warning in case goals field is not filled
+ * Adds a toast for email sent
  */
 function showToast() {
   let toast = `<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -108,7 +108,7 @@ function showToast() {
 }
 
 /**
- * Parses BucketList of at least one item into friendly format to email user.
+ * Parses html BucketList of at least one item into friendly format to email user.
  */
 function parseBucketList() {
   let stringBucketList = ``;

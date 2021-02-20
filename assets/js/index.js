@@ -142,7 +142,6 @@ $('#send-list-by-email').on('click', function () {
 }, 800, 'swing');
 });
 
-
 /**
  * Email form Submit handled here 
  */
@@ -182,3 +181,56 @@ function sendEmail(data) {
     message: `${data.bucketList}`,
     });
 }
+
+/**
+ * If there's no quote get quotes and store locally.
+ */
+if (!localStorage.getItem('quotes')) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://philosophy-quotes-api.glitch.me/quotes/philosophy/Stoicism', true);
+  xhr.responseType = 'text';
+  xhr.onload = function () {
+      if (xhr.readyState === xhr.DONE) {
+          if (xhr.status === 200) {
+            localStorage.setItem('quotes', xhr.response);
+          }
+      }
+  };
+  xhr.send(null);
+}
+
+/**
+ * parse localStorage quotes
+ */
+function getRandomQuoteFromLocalStorage() {
+  const quotes = JSON.parse(localStorage.getItem('quotes'));  
+  if (quotes) {
+    const randomQuoteOfChoice = Math.floor(Math.random() * Math.floor(quotes.length));
+    return {
+      'quote': quotes[randomQuoteOfChoice].quote,
+      'author': quotes[randomQuoteOfChoice].source
+    };
+  } else {
+    return {
+      'quote': 'Luck is what happens when preparation meets opportunity.',
+      'author': 'Seneca'
+    };
+  }
+  
+}
+
+/**
+ * Parse quote object into html element 
+ */
+function parseQuoteToParagraph() {
+  let quote = getRandomQuoteFromLocalStorage();
+  return `
+    <blockquote class="blockquote">
+      <p class="mb-0">${quote.quote}</p>
+      <footer class="blockquote-footer">${quote.author}</footer>
+    </blockquote>
+   `;
+}
+
+// Append Quote into jumbotron
+$(parseQuoteToParagraph()).appendTo('#quotes');

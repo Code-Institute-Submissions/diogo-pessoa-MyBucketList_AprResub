@@ -109,6 +109,7 @@ Code Editor [Vscode](https://code.visualstudio.com/) and Chrome browser with dev
 - bootstrap theme from: [bootswatch](https://bootswatch.com/journal/) under MIT license;
 - [fontawesome](https://fontawesome.com/);
 - [Bootstrap toast](https://getbootstrap.com/docs/4.2/components/toasts/);
+- Api collection for Inspirational quotes [philosophy-quotes-API](https://github.com/KaranDahiya/philosophy-quotes-API);
 
 ### Acknowledgements
 

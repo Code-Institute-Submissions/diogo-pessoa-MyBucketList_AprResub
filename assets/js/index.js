@@ -26,6 +26,13 @@ $('#add-bucketlist-item-form').submit(function(e) {
 });
 
 /**
+ * Add min Date to date input field to current date.
+ */
+const currentDate = moment().format('YYYY-MM-DD'); 
+console.log(currentDate);
+$('#date-planned').attr('min', currentDate);
+
+/**
  * Append your goal to your Bucket List
  * @param {Object} bucketListItem
  */
@@ -42,7 +49,7 @@ function AddItemToBucketList(bucketListItem) {
   /* remove first sample Item */
   removeEmptyLines();
   /* Add Item to list */
-  $('#bucketList').prepend(newItem);
+  $('#bucket-list').prepend(newItem);
   if ($('#emailDetails').parent().attr('hidden')) {
     $('#send-list-by-email').removeAttr('hidden');
   }
@@ -53,7 +60,7 @@ function AddItemToBucketList(bucketListItem) {
  */
 function removeEmptyLines() {
   /** removes sample line on first prepend */
-  const lastLine = $('#bucketList').children('li').last();
+  const lastLine = $('#bucket-list').children('li').last();
   if (!lastLine.text()) {
     lastLine.remove();
   }
@@ -78,7 +85,7 @@ $('ul').on('click', '.removeListItem', function() {
   // removes li element from bucketList
   $(this).parent().remove();
   // hides email form and button
-  if ($('#bucketList').children('li').length == 0 ) {
+  if ($('#bucket-list').children('li').length == 0 ) {
     console.log('hide email button and form');
     $('#send-list-by-email').attr('hidden', '');
     $('#emailDetails').parent().attr('hidden', '');
@@ -91,8 +98,8 @@ $('ul').on('click', '.removeListItem', function() {
  * using Jquery-UI library
  */
 
-$('#bucketList').sortable();  
-$('#bucketList').disableSelection();
+$('#bucket-list').sortable();  
+$('#bucket-list').disableSelection();
 
 /**
  * Adds a toast for email sent
@@ -112,7 +119,7 @@ function showToast() {
  */
 function parseBucketList() {
   let stringBucketList = ``;
-  const htmlBucketList = $('#bucketList').children('li');
+  const htmlBucketList = $('#bucket-list').children('li');
   let order = 0;
   for (const liElement of htmlBucketList) {
     if(liElement.innerText) {

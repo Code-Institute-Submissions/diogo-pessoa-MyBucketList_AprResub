@@ -242,6 +242,5 @@ if (window.localStorage.getItem('quotes')) {
       $('#quotes').children('blockquote').replaceWith(parseQuoteToParagraph());
       $('#quotes').fadeIn("slow");
   });
-    console.log('reloading quote');
   }, 45000);
 }

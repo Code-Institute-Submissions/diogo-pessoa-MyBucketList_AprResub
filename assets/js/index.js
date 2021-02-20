@@ -90,7 +90,6 @@ $('ul').on('click', '.removeListItem', function() {
   }
 });
 
-
 /**
  *  Re-order List Item
  * using Jquery-UI library
@@ -232,3 +231,17 @@ function parseQuoteToParagraph() {
 
 // Append Quote into jumbotron
 $(parseQuoteToParagraph()).appendTo('#quotes');
+
+/**
+ * If there's many quotes, randomly rotates them every 45 seconds.
+ */
+if (window.localStorage.getItem('quotes')) {
+  setInterval(function() {
+    $('#quotes').fadeOut("slow", function(){
+      var div = $("#quotes").hide();
+      $('#quotes').children('blockquote').replaceWith(parseQuoteToParagraph());
+      $('#quotes').fadeIn("slow");
+  });
+    console.log('reloading quote');
+  }, 45000);
+}

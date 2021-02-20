@@ -116,3 +116,4 @@ Code Editor [Vscode](https://code.visualstudio.com/) and Chrome browser with dev
 The official [JQuery documentation](https://api.jquery.com/).
 
 - Notepad css background used in List Section is inspired in [css_tricks](https://css-tricks.com/how-to-create-a-notebook-design-with-css/);
+- animation to Fade-in Quotes [StackOverflow](https://stackoverflow.com/questions/5248721/jquery-replacewith-fade-animate)

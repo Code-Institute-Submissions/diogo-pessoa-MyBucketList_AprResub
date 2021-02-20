@@ -29,7 +29,6 @@ $('#add-bucketlist-item-form').submit(function(e) {
  * Add min Date to date input field to current date.
  */
 const currentDate = moment().format('YYYY-MM-DD'); 
-console.log(currentDate);
 $('#date-planned').attr('min', currentDate);
 
 /**
@@ -86,7 +85,6 @@ $('ul').on('click', '.removeListItem', function() {
   $(this).parent().remove();
   // hides email form and button
   if ($('#bucket-list').children('li').length == 0 ) {
-    console.log('hide email button and form');
     $('#send-list-by-email').attr('hidden', '');
     $('#emailDetails').parent().attr('hidden', '');
   }

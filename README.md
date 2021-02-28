@@ -71,6 +71,9 @@ Tested both on Browser developer tools & available devices.
    -  At least one item is added to the bucket list. Email button is displayed. At this stage, if all items are removed from the list button is hidden. 
    - Second Case. The list has one item, the user clicks on `Email me this list`, page auto scrolls to the email form. If at this user cleans-up the bucket list. Page hides email form.
 - footer links, both open on a separate tab.
+- Discovered while testing setInterval wouldn't start because on very first request locaStorage didn't have the quotes yet. Hence on first visit quote would fallback to default. 
+  - removed if condition that was wrapping the setDefaultInterval, now inside the function it triggers the fadeOut and replacement of the quote if localStorage has array of Objects `quotes`.
+  - [User story](https://trello.com/c/ZQhhDu51)
  
 #### Static Content checks
 - [W3C HTML Validator](https://validator.w3.org/)

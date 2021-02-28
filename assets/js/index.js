@@ -28,8 +28,8 @@ $('#add-bucketlist-item-form').submit(function(e) {
 /**
  * Add min Date to date input field to current date.
  */
-const currentDate = moment().format('YYYY-MM-DD'); 
-$('#date-planned').attr('min', currentDate);
+const currentDate = moment().format('YYYY-MM-DD');
+$('#date-planned').attr('min',currentDate);
 
 /**
  * Append your goal to your Bucket List
@@ -80,13 +80,13 @@ function formatDate(plannedDate) {
 /**
  *  remove Item from list
  */
-$('ul').on('click', '.removeListItem', function() {
+$('ul').on('click','.removeListItem',function() {
   // removes li element from bucketList
   $(this).parent().remove();
   // hides email form and button
-  if ($('#bucket-list').children('li').length == 0 ) {
-    $('#send-list-by-email').attr('hidden', '');
-    $('#emailDetails').parent().attr('hidden', '');
+  if ($('#bucket-list').children('li').length == 0) {
+    $('#send-list-by-email').attr('hidden','');
+    $('#emailDetails').parent().attr('hidden','');
   }
 });
 
@@ -95,7 +95,7 @@ $('ul').on('click', '.removeListItem', function() {
  * using Jquery-UI library
  */
 
-$('#bucket-list').sortable();  
+$('#bucket-list').sortable();
 $('#bucket-list').disableSelection();
 
 /**
@@ -119,8 +119,8 @@ function parseBucketList() {
   const htmlBucketList = $('#bucket-list').children('li');
   let order = 0;
   for (const liElement of htmlBucketList) {
-    if(liElement.innerText) {
-      stringBucketList += `${++order} - ${liElement.innerText}; `;  
+    if (liElement.innerText) {
+      stringBucketList += `${++order} - ${liElement.innerText}; `;
     }
   }
   return stringBucketList;
@@ -130,13 +130,13 @@ function parseBucketList() {
  * Event Listener for send email button show email form and hides send-list button
  * 
  */
-$('#send-list-by-email').on('click', function () {
+$('#send-list-by-email').on('click',function() {
   $('#emailDetails').parent().removeAttr('hidden');
-  $(this).attr('hidden', '');
+  $(this).attr('hidden','');
   //scroll to form
   $('html').stop().animate({
     'scrollTop': $('#emailDetails').offset().top
-}, 800, 'swing');
+  },800,'swing');
 });
 
 /**
@@ -154,11 +154,11 @@ $('#emailDetails').submit(function(e) {
       sendEmail(emailDetails);
       showToast();
     } else {
-        //  email button is hidden, this condition should never be met.
-        // still we refuse to email an empty list to user.
-        alert('BucketList is empty, refusing to send email. Please report this issue, details are on page footer');
+      //  email button is hidden, this condition should never be met.
+      // still we refuse to email an empty list to user.
+      alert('BucketList is empty, refusing to send email. Please report this issue, details are on page footer');
     }
-    
+
   } else {
     const message = 'Check your added details';
     const id = '#emailDetails';
@@ -176,7 +176,7 @@ function sendEmail(data) {
     email: `${data.email}`,
     to_name: `${data.name}`,
     message: `${data.bucketList}`,
-    });
+  });
 }
 
 /**
@@ -184,14 +184,14 @@ function sendEmail(data) {
  */
 if (!localStorage.getItem('quotes')) {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://philosophy-quotes-api.glitch.me/quotes/philosophy/Stoicism', true);
+  xhr.open('GET','https://philosophy-quotes-api.glitch.me/quotes/philosophy/Stoicism',true);
   xhr.responseType = 'text';
-  xhr.onload = function () {
-      if (xhr.readyState === xhr.DONE) {
-          if (xhr.status === 200) {
-            localStorage.setItem('quotes', xhr.response);
-          }
+  xhr.onload = function() {
+    if (xhr.readyState === xhr.DONE) {
+      if (xhr.status === 200) {
+        localStorage.setItem('quotes',xhr.response);
       }
+    }
   };
   xhr.send(null);
 }
@@ -200,7 +200,7 @@ if (!localStorage.getItem('quotes')) {
  * parse localStorage quotes
  */
 function getRandomQuoteFromLocalStorage() {
-  const quotes = JSON.parse(localStorage.getItem('quotes'));  
+  const quotes = JSON.parse(localStorage.getItem('quotes'));
   if (quotes) {
     const randomQuoteOfChoice = Math.floor(Math.random() * Math.floor(quotes.length));
     return {
@@ -213,7 +213,6 @@ function getRandomQuoteFromLocalStorage() {
       'author': 'Seneca'
     };
   }
-  
 }
 
 /**
@@ -235,12 +234,14 @@ $(parseQuoteToParagraph()).appendTo('#quotes');
 /**
  * If there's many quotes, randomly rotates them every 45 seconds.
  */
-if (window.localStorage.getItem('quotes').length > 0) {
-  setInterval(function() {
-    $('#quotes').fadeOut("slow", function(){
+
+setInterval(function() {
+  if (window.localStorage.getItem('quotes').length > 0) {
+    $('#quotes').fadeOut("slow",function() {
       var div = $("#quotes").hide();
       $('#quotes').children('blockquote').replaceWith(parseQuoteToParagraph());
       $('#quotes').fadeIn("slow");
-  });
-  }, 45000);
-}
+    });
+  }
+},30000);
+

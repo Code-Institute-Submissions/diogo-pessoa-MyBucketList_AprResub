@@ -19,7 +19,7 @@ $('#add-bucketlist-item-form').submit(function(e) {
     'datePlanned': $("#date-planned").val() || null
   };
   if (bucketListItem.action) {
-    AddItemToBucketList(bucketListItem);
+    addItemToBucketList(bucketListItem);
   } else {
     alert('Missing an goal on this Item!');
   }
@@ -35,7 +35,7 @@ $('#date-planned').attr('min', currentDate);
  * Append your goal to your Bucket List
  * @param {Object} bucketListItem
  */
-function AddItemToBucketList(bucketListItem) {
+function addItemToBucketList(bucketListItem) {
   let newItem = `<li>${bucketListItem.action}`;
   if (bucketListItem.location) {
     newItem += `, ${bucketListItem.location}`;
@@ -180,7 +180,7 @@ function sendEmail(data) {
 }
 
 /**
- * If there's no quote get quotes and store locally.
+ * If there's no quote, then get quotes and store locally.
  */
 if (!localStorage.getItem('quotes')) {
   var xhr = new XMLHttpRequest();
@@ -235,7 +235,7 @@ $(parseQuoteToParagraph()).appendTo('#quotes');
 /**
  * If there's many quotes, randomly rotates them every 45 seconds.
  */
-if (window.localStorage.getItem('quotes')) {
+if (window.localStorage.getItem('quotes').length > 0) {
   setInterval(function() {
     $('#quotes').fadeOut("slow", function(){
       var div = $("#quotes").hide();

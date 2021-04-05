@@ -5,69 +5,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CCS Styling -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- Js Script Pre-loaded -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <!-- emailJs Support -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <!-- Loading momentJs  -->
     <script src="assets/js/moment.min.js"></script>
     <title>My Bucket List</title>
 </head>
 
 <body>
+    <!-- Page Header -->
     <header>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm">
                     <nav class="navbar navbar-expand-sm navbar-expand-lg navbar-dark bg-primary">
-                        <a class="navbar-brand" href="index.html">My BucketList <i class="fa fa-pencil-square-o"></i></a>
+                        <a class="navbar-brand" href="index.html">My BucketList <i
+                                class="fa fa-pencil-square-o"></i></a>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <section>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <div class="jumbotron">
-                        <h3 class="display-4"> What's on your Bucket List?</h3>
-                        <hr class="my-4">
-                        <div id="quotes">
+    <!-- Main Page Content -->
+    <main>
+        <!-- Jumbotron -->
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="jumbotron">
+                            <h3 class="display-4"> What's on your Bucket List?</h3>
+                            <hr class="my-4">
+                            <div id="quotes">
+                            </div>
+                            <h5 id="bucketlist-description">What is a bucket list? <i class="fa fa-info-circle"></i>
+                            </h5>
+                            <p id="collapse-bucketList-info" class="text-muted">
+                                It is a collection of goals, dreams and aspirations that you would like to accomplish
+                                within your lifetime.
+                                The basic meaning of a bucket list is to keep track of your goals and to take steps to
+                                achieving these goals in order to maximize the experiences in your life.
+                            </p>
                         </div>
-                        <h5 id="bucketlist-description">What is a bucket list? <i class="fa fa-info-circle"></i></h5>
-                        <p id="collapse-bucketList-info" class="text-muted">
-                            It is a collection of goals, dreams and aspirations that you would like to accomplish within your lifetime. 
-                            The basic meaning of a bucket list is to keep track of your goals and to take steps to achieving these goals in order to maximize the experiences in your life.
-                        </p>
                     </div>
                 </div>
             </div>
-            <hr class="my-4">
+        </section>
+        <hr class="my-4">
+        <!-- Form Create bucketList item -->
+        <section>
             <div class="row">
                 <div class="col">
                     <form id="add-bucketlist-item-form" action="javascript:alert( 'item included on your list!' );">
                         <fieldset>
-                            <legend>Create your bucketList</legend>
+                            <h2>Create your bucketList</h2>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="bucketlist-item" placeholder="What's your goal? ex: fly a plane">
+                                <input type="text" class="form-control" id="bucketlist-item"
+                                    placeholder="What are your goals? ex: fly a plane">
                             </div>
                             <div class="form-group">
                                 <label for="location">Location</label>
                                 <input type="text" class="form-control-sm d-sm-block d-md-inline" id="location"
                                     placeholder="Have a location in mind?">
                                 <label for="date-planned">Set a date?</label>
-                                <input class="form-control-sm d-sm-block d-sm-block d-md-inline" type="date" id="date-planned" name="date-planned" pattern="\d{4}-\d{2}-\d{2}">
+                                <input class="form-control-sm d-sm-block d-sm-block d-md-inline" type="date"
+                                    id="date-planned" name="date-planned">
                             </div>
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Add to bucket list</button>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Add to bucket
+                                list</button>
                         </fieldset>
                     </form>
                 </div>
             </div>
-            <hr class="my-4">
+        </section>
+        <hr class="my-4">
+        <!-- Send e-mail form -->
+        <section>
+            <div class="row send-mail-row">
+                <button hidden id="send-list-by-email" type="submit" class="btn btn-secondary btn-md btn-primary">Email
+                    me this list</button>
+                <div hidden class="col-sm col-md-10 col-lg-10">
+                    <form id='emailDetails'>
+                        <h3>Enter Details</h3>
+                        <div class="form-group">
+                            <label for="username">YourName</label>
+                            <input type="text" class="form-control" id="username" placeholder="Name"
+                                style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIUlEQVQ4EX2TOYhTURSG87IMihDsjGghBhFBmHFDHLWwSqcikk4RRKJgk0KL7C8bMpWpZtIqNkEUl1ZCgs0wOo0SxiLMDApWlgOPrH7/5b2QkYwX7jvn/uc//zl3edZ4PPbNGvF4fC4ajR5VrNvt/mo0Gr1ZPOtfgWw2e9Lv9+chX7cs64CS4Oxg3o9GI7tUKv0Q5o1dAiTfCgQCLwnOkfQOu+oSLyJ2A783HA7vIPLGxX0TgVwud4HKn0nc7Pf7N6vV6oZHkkX8FPG3uMfgXC0Wi2vCg/poUKGGcagQI3k7k8mcp5slcGswGDwpl8tfwGJg3xB6Dvey8vz6oH4C3iXcFYjbwiDeo1KafafkC3NjK7iL5ESFGQEUF7Sg+ifZdDp9GnMF/KGmfBdT2HCwZ7TwtrBPC7rQaav6Iv48rqZwg+F+p8hOMBj0IbxfMdMBrW5pAVGV/ztINByENkU0t5BIJEKRSOQ3Aj+Z57iFs1R5NK3EQS6HQqF1zmQdzpFWq3W42WwOTAf1er1PF2USFlC+qxMvFAr3HcexWX+QX6lUvsKpkTyPSEXJkw6MQ4S38Ljdbi8rmM/nY+CvgNcQqdH6U/xrYK9t244jZv6ByUOSiDdIfgBZ12U6dHEHu9TpdIr8F0OP692CtzaW/a6y3y0Wx5kbFHvGuXzkgf0xhKnPzA4UTyaTB8Ph8AvcHi3fnsrZ7Wore02YViqVOrRXXPhfqP8j6MYlawoAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">Email address</label>
+                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                                placeholder="Enter valid email: email@example.com"
+                                style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                anyone else.</small>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-secondary btn-sm btn-primary">send
+                                Email</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- BucketList Unordered List -->
+        <section>
             <div class="container-fluid">
                 <div class="row notes">
                     <div class="col lines">
@@ -75,47 +129,32 @@
                             <h4 class="col">My Bucket List:</h4>
                         </div>
                         <div class="row">
-                        <div class="lines"></div>
+                            <div class="lines"></div>
                             <ul id="bucket-list" class="list">
-                                <li class='removed-on-first-iteraction'>Add your first Item <i class="removeListItem fa fa-times-circle"></i></li>
+                                <li class='removed-on-first-iteraction'>Add your first Item <i
+                                        class="removeListItem fa fa-times-circle"></i></li>
                                 <li></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="row send-mail-row">
-                    <button hidden id="send-list-by-email" type="submit" class="btn btn-secondary btn-md btn-primary">Email me this list</button>
-                    <div hidden class="col-sm col-md-10 col-lg-10">
-                        <form id='emailDetails'>
-                              <h3>Enter Details</h3>
-                              <div class="form-group">
-                                <label for="username">YourName</label>
-                                <input type="text" class="form-control" id="username" placeholder="Name" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIUlEQVQ4EX2TOYhTURSG87IMihDsjGghBhFBmHFDHLWwSqcikk4RRKJgk0KL7C8bMpWpZtIqNkEUl1ZCgs0wOo0SxiLMDApWlgOPrH7/5b2QkYwX7jvn/uc//zl3edZ4PPbNGvF4fC4ajR5VrNvt/mo0Gr1ZPOtfgWw2e9Lv9+chX7cs64CS4Oxg3o9GI7tUKv0Q5o1dAiTfCgQCLwnOkfQOu+oSLyJ2A783HA7vIPLGxX0TgVwud4HKn0nc7Pf7N6vV6oZHkkX8FPG3uMfgXC0Wi2vCg/poUKGGcagQI3k7k8mcp5slcGswGDwpl8tfwGJg3xB6Dvey8vz6oH4C3iXcFYjbwiDeo1KafafkC3NjK7iL5ESFGQEUF7Sg+ifZdDp9GnMF/KGmfBdT2HCwZ7TwtrBPC7rQaav6Iv48rqZwg+F+p8hOMBj0IbxfMdMBrW5pAVGV/ztINByENkU0t5BIJEKRSOQ3Aj+Z57iFs1R5NK3EQS6HQqF1zmQdzpFWq3W42WwOTAf1er1PF2USFlC+qxMvFAr3HcexWX+QX6lUvsKpkTyPSEXJkw6MQ4S38Ljdbi8rmM/nY+CvgNcQqdH6U/xrYK9t244jZv6ByUOSiDdIfgBZ12U6dHEHu9TpdIr8F0OP692CtzaW/a6y3y0Wx5kbFHvGuXzkgf0xhKnPzA4UTyaTB8Ph8AvcHi3fnsrZ7Wore02YViqVOrRXXPhfqP8j6MYlawoAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">          
-                              </div>
-                              <div class="form-group">
-                                <label for="inputEmail">Email address</label>
-                                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter valid email: email@example.com" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                              </div>
-                              <div>
-                              <button type="submit" class="btn btn-secondary btn-sm btn-primary">send Email</button>
-                              </div>
-                        </form>
-                        </div>
-                </div>
             </div>
-        </div>
-    </section>
-    <script src="assets/js/index.js"></script>
+        </section>
+        <!-- Loading Customized JS -->
+        <script src="assets/js/index.js"></script>
+    </main>
+    <!-- Page Footer -->
     <footer>
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <p class="footer-content"> Created by <a target="_blank" href="https://github.com/diogo-pessoa/">diogo-pessoa</a> have an issue<a target="_blank" href="https://github.com/diogo-pessoa/MyBucketList/issues"> report <i class="fa fa-wrench"></i></a> </p>
+                    <p class="footer-content"> Created by <a target="_blank"
+                            href="https://github.com/diogo-pessoa/">diogo-pessoa</a> have an issue<a target="_blank"
+                            href="https://github.com/diogo-pessoa/MyBucketList/issues"> report <i
+                                class="fa fa-wrench"></i></a> </p>
                 </div>
             </div>
         </div>
     </footer>
 </body>
-
 </html>

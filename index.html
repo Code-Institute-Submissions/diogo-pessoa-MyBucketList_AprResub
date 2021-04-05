@@ -27,50 +27,40 @@
 <body>
     <!-- Page Header -->
     <header>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm">
-                    <nav class="navbar navbar-expand-sm navbar-expand-lg navbar-dark bg-primary">
-                        <a class="navbar-brand" href="index.html">My BucketList <i
-                                class="fa fa-pencil-square-o"></i></a>
-                    </nav>
+        <!-- Jumbotron -->
+        <div class="col">
+            <div class="row no-gutters bg-primary">
+                <h1 class="center-content">
+                    <a class="main-title-color" href="index.html">My BucketList <i
+                        class="fa fa-pencil-square-o"></i></a>
+                </h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="jumbotron">
+                <div id="quotes">
                 </div>
+                <h5 id="bucketlist-description">What is a bucket list? <i class="fa fa-info-circle"></i>
+                </h5>
+                <p id="collapse-bucketList-info" class="text-muted">
+                    It is a collection of goals, dreams and aspirations that you would like to accomplish
+                    within your lifetime.
+                    The basic meaning of a bucket list is to keep track of your goals and to take steps to
+                    achieving these goals in order to maximize the experiences in your life.
+                </p>
             </div>
         </div>
     </header>
     <!-- Main Page Content -->
     <main>
-        <!-- Jumbotron -->
-        <section>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col">
-                        <div class="jumbotron">
-                            <h3 class="display-4"> What's on your Bucket List?</h3>
-                            <hr class="my-4">
-                            <div id="quotes">
-                            </div>
-                            <h5 id="bucketlist-description">What is a bucket list? <i class="fa fa-info-circle"></i>
-                            </h5>
-                            <p id="collapse-bucketList-info" class="text-muted">
-                                It is a collection of goals, dreams and aspirations that you would like to accomplish
-                                within your lifetime.
-                                The basic meaning of a bucket list is to keep track of your goals and to take steps to
-                                achieving these goals in order to maximize the experiences in your life.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-- Instructions for BucketList -->
         <section>
             <div class="col">
                 <div class="row">
-                    <h1 class="center-content">How to write your own Bucket List</h1>
+                    <h2 class="center-content">How to build a List</h2>
                 </div>
                 <!-- How to write your list Steps -->
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <ul class="nav nav-tabs my-4" id="myTab" role="tablist">
                     <!-- brainstorming tab content -->
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="brainstorming-tab" data-bs-toggle="tab"
@@ -86,7 +76,8 @@
                     <!-- Organize and review content -->
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="organize-tab" data-bs-toggle="tab" data-bs-target="#organize"
-                            type="button" role="tab" aria-controls="organize" aria-selected="true">3 Organize your thoughts</button>
+                            type="button" role="tab" aria-controls="organize" aria-selected="true">3 Organize your
+                            thoughts</button>
                     </li>
                     <!-- finishing up your list -->
                     <li class="nav-item" role="presentation">
@@ -106,11 +97,14 @@
                                     listening</h5>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Choose goals that are <span class="text-primary"> meaningful to you.</span></li>
+                                <li class="list-group-item">Choose goals that are <span class="text-primary"> meaningful
+                                        to you.</span></li>
                                 <li class="list-group-item">Cast off expectations.</li>
-                                <li class="list-group-item">If you feel comfortable <span class="text-primary">talk to others for inspiration.</span></li>
+                                <li class="list-group-item">If you feel comfortable <span class="text-primary">talk to
+                                        others for inspiration.</span></li>
                                 <li class="list-group-item">Allow yourself to dream big.</li>
-                                <li class="list-group-item">Don’t let your answers be <span class="text-primary">controlled by fear and hesitation.</span></li>
+                                <li class="list-group-item">Don’t let your answers be <span
+                                        class="text-primary">controlled by fear and hesitation.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -126,9 +120,11 @@
                                     the fields below to add as many items as you want to your list</li>
                                 <li class="list-group-item">Include a combination of large and small goals.</li>
                                 <li class="list-group-item"><span class="text-primary">Re-order and group items by
-                                        place, or date.</span> By clicking and moving items around on the list you can put them close together</li>
-                                <li class="list-group-item"><span class="text-primary">It is okay to remove and re-write</span>. Just click on the <i
-                                    class="fa fa-times-circle"></i> beside the item to remove it from the list</li>
+                                        place, or date.</span> By clicking and moving items around on the list you can
+                                    put them close together</li>
+                                <li class="list-group-item"><span class="text-primary">It is okay to remove and
+                                        re-write</span>. Just click on the <i class="fa fa-times-circle"></i> beside the
+                                    item to remove it from the list</li>
                                 <li class="list-group-item">Take some time to reflect before removing an item</li>
                             </ul>
                         </div>
@@ -138,15 +134,17 @@
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h4 class="card-title">Organizing and Review Your Bucket List</h4>
-                                <h5 class="card-subtitle text-muted">Take a critical look on your draft and organize the final list</h5>
+                                <h5 class="card-subtitle text-muted">Take a critical look on your draft and organize the
+                                    final list</h5>
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item"><span class="text-primary">Write down every idea.</span> Use
                                     the fields below to add as many items as you want to your list</li>
                                 <li class="list-group-item">Break big goals down into easier and harder variations.</li>
-                                <li class="list-group-item"><span class="text-primary">Group items by time.</span> Drag and drop an item to move it around</li>
-                                <li class="list-group-item"><span class="text-primary">Remove unrealistic items.</span> use the <i
-                                    class="fa fa-times-circle"></i> to remove an item</li>
+                                <li class="list-group-item"><span class="text-primary">Group items by time.</span> Drag
+                                    and drop an item to move it around</li>
+                                <li class="list-group-item"><span class="text-primary">Remove unrealistic items.</span>
+                                    use the <i class="fa fa-times-circle"></i> to remove an item</li>
                                 <li class="list-group-item">Review your list frequently.</li>
                             </ul>
                         </div>
@@ -156,84 +154,96 @@
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h4 class="card-title">Finish and Share your list</h4>
-                                <h5 class="card-subtitle text-muted">Time for the final touches. Remeber to share this list with an adventure buddy.</h5>
+                                <h5 class="card-subtitle text-muted">Time for the final touches. Remeber to share this
+                                    list with an adventure buddy.</h5>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><span class="text-primary">Find a bucket list buddy share your list.</span> Having someone to share helps to ticking off some items.</li> 
-                                <li class="list-group-item">Share your list using the <span class="text-primary">email this list form button</span>on top of the bucket list, fill the form and you'll receive this list by email.</li>
-                                <li class="list-group-item"><span class="text-primary">Review and repeat this exercise a couple of months.</span> You may find yourself changed when you start ticking items of the list</li>
-                                <li class="list-group-item"><span class="text-primary">Be forgiving to yourself.</span> Sometime life gets in the way.</li>
-                                <li class="list-group-item"><span class="text-primary">Remember to enjoy this exercise, it isn't a obligation.</span> It's a mindful exercise to help organize your thoughts aiming for a life with fewer regrets.</li>
+                                <li class="list-group-item"><span class="text-primary">Find a bucket list buddy share
+                                        your list.</span> Having someone to share helps to ticking off some items.</li>
+                                <li class="list-group-item">Share your list using the <span class="text-primary">email
+                                        this list form button</span>on top of the bucket list, fill the form and you'll
+                                    receive this list by email.</li>
+                                <li class="list-group-item"><span class="text-primary">Review and repeat this exercise a
+                                        couple of months.</span> You may find yourself changed when you start ticking
+                                    items of the list</li>
+                                <li class="list-group-item"><span class="text-primary">Be forgiving to yourself.</span>
+                                    Sometime life gets in the way.</li>
+                                <li class="list-group-item"><span class="text-primary">Remember to enjoy this exercise,
+                                        it isn't a obligation.</span> It's a mindful exercise to help organize your
+                                    thoughts aiming for a life with fewer regrets.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <hr class="my-4">
             </div>
         </section>
+        <hr>
         <!-- Form Create bucketList item -->
         <section>
-            <div class="row">
-                <div class="col">
-                    <form id="add-bucketlist-item-form" action="javascript:alert( 'item included on your list!' );">
-                        <fieldset>
-                            <h2>Create your bucketList</h2>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="bucketlist-item"
-                                    placeholder="What are your goals? ex: fly a plane">
-                            </div>
-                            <div class="form-group">
-                                <label for="location">Location</label>
-                                <input type="text" class="form-control-sm d-sm-block d-md-inline" id="location"
-                                    placeholder="Have a location in mind?">
-                                <label for="date-planned">Set a date?</label>
-                                <input class="form-control-sm d-sm-block d-sm-block d-md-inline" type="date"
-                                    id="date-planned" name="date-planned">
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Add to bucket
-                                list</button>
-                        </fieldset>
-                    </form>
+            <div class="col">
+                <div class="row">
+                    <h2 class="center-content">Add a goal</h2>
                 </div>
+                <form id="add-bucketlist-item-form" action="javascript:alert( 'item included on your list!' );"
+                    class="my-4">
+                    <fieldset>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="bucketlist-item"
+                                placeholder="What are your goals? ex: fly a plane">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" class="form-control-sm d-sm-block d-md-inline" id="location"
+                                placeholder="Have a location in mind?">
+                            <label for="date-planned">Set a date?</label>
+                            <input class="form-control-sm d-sm-block d-sm-block d-md-inline" type="date"
+                                id="date-planned" name="date-planned">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Add to bucket
+                            list</button>
+                    </fieldset>
+                </form>
             </div>
         </section>
-        <hr class="my-4">
+        <hr>
         <!-- Send e-mail form -->
         <section>
-            <div class="row send-mail-row">
+            <div class="row no-gutters">
                 <button hidden id="send-list-by-email" type="submit" class="btn btn-secondary btn-md btn-primary">Email
                     me this list</button>
-                <div hidden class="col-sm col-md-10 col-lg-10">
-                    <form id='emailDetails'>
-                        <h3>Enter Details</h3>
-                        <div class="form-group">
-                            <label for="username">YourName</label>
-                            <input type="text" class="form-control" id="username" placeholder="Name"
-                                style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIUlEQVQ4EX2TOYhTURSG87IMihDsjGghBhFBmHFDHLWwSqcikk4RRKJgk0KL7C8bMpWpZtIqNkEUl1ZCgs0wOo0SxiLMDApWlgOPrH7/5b2QkYwX7jvn/uc//zl3edZ4PPbNGvF4fC4ajR5VrNvt/mo0Gr1ZPOtfgWw2e9Lv9+chX7cs64CS4Oxg3o9GI7tUKv0Q5o1dAiTfCgQCLwnOkfQOu+oSLyJ2A783HA7vIPLGxX0TgVwud4HKn0nc7Pf7N6vV6oZHkkX8FPG3uMfgXC0Wi2vCg/poUKGGcagQI3k7k8mcp5slcGswGDwpl8tfwGJg3xB6Dvey8vz6oH4C3iXcFYjbwiDeo1KafafkC3NjK7iL5ESFGQEUF7Sg+ifZdDp9GnMF/KGmfBdT2HCwZ7TwtrBPC7rQaav6Iv48rqZwg+F+p8hOMBj0IbxfMdMBrW5pAVGV/ztINByENkU0t5BIJEKRSOQ3Aj+Z57iFs1R5NK3EQS6HQqF1zmQdzpFWq3W42WwOTAf1er1PF2USFlC+qxMvFAr3HcexWX+QX6lUvsKpkTyPSEXJkw6MQ4S38Ljdbi8rmM/nY+CvgNcQqdH6U/xrYK9t244jZv6ByUOSiDdIfgBZ12U6dHEHu9TpdIr8F0OP692CtzaW/a6y3y0Wx5kbFHvGuXzkgf0xhKnPzA4UTyaTB8Ph8AvcHi3fnsrZ7Wore02YViqVOrRXXPhfqP8j6MYlawoAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail">Email address</label>
-                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
-                                placeholder="Enter valid email: email@example.com"
-                                style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with
-                                anyone else.</small>
-                        </div>
-                        <div>
-                            <button type="submit" class="btn btn-secondary btn-sm btn-primary">send
-                                Email</button>
-                        </div>
-                    </form>
+            </div>
+            <div hidden class="col">
+                <div class="row">
+                    <h2 class="center-content">Enter email information</h2>
                 </div>
+                <form id='emailDetails'>
+                    <div class="form-group">
+                        <label for="username">YourName</label>
+                        <input type="text" class="form-control" id="username" placeholder="Name"
+                            style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIUlEQVQ4EX2TOYhTURSG87IMihDsjGghBhFBmHFDHLWwSqcikk4RRKJgk0KL7C8bMpWpZtIqNkEUl1ZCgs0wOo0SxiLMDApWlgOPrH7/5b2QkYwX7jvn/uc//zl3edZ4PPbNGvF4fC4ajR5VrNvt/mo0Gr1ZPOtfgWw2e9Lv9+chX7cs64CS4Oxg3o9GI7tUKv0Q5o1dAiTfCgQCLwnOkfQOu+oSLyJ2A783HA7vIPLGxX0TgVwud4HKn0nc7Pf7N6vV6oZHkkX8FPG3uMfgXC0Wi2vCg/poUKGGcagQI3k7k8mcp5slcGswGDwpl8tfwGJg3xB6Dvey8vz6oH4C3iXcFYjbwiDeo1KafafkC3NjK7iL5ESFGQEUF7Sg+ifZdDp9GnMF/KGmfBdT2HCwZ7TwtrBPC7rQaav6Iv48rqZwg+F+p8hOMBj0IbxfMdMBrW5pAVGV/ztINByENkU0t5BIJEKRSOQ3Aj+Z57iFs1R5NK3EQS6HQqF1zmQdzpFWq3W42WwOTAf1er1PF2USFlC+qxMvFAr3HcexWX+QX6lUvsKpkTyPSEXJkw6MQ4S38Ljdbi8rmM/nY+CvgNcQqdH6U/xrYK9t244jZv6ByUOSiDdIfgBZ12U6dHEHu9TpdIr8F0OP692CtzaW/a6y3y0Wx5kbFHvGuXzkgf0xhKnPzA4UTyaTB8Ph8AvcHi3fnsrZ7Wore02YViqVOrRXXPhfqP8j6MYlawoAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email address</label>
+                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                            placeholder="Enter valid email: email@example.com"
+                            style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                            anyone else.</small>
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="btn btn-secondary btn-sm btn-primary center-content">send
+                            Email</button>
+                    </div>
+                </form>
             </div>
         </section>
         <!-- BucketList Unordered List -->
         <section>
             <div class="container-fluid">
-                <div class="row notepad-styling">
+                <div class="row notepad-styling my-4">
                     <div class="col lines">
                         <div class="row">
-                            <h4 class="col bucket-list-title">My Bucket List:</h4>
+                            <h4 class="center-content bucket-list-title">My Bucket List:</h4>
                         </div>
                         <div class="row">
                             <div class="lines"></div>

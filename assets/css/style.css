@@ -56,9 +56,13 @@
 
 /* Send-email form END */
 
-/* General paddings/Margins */
+/* General paddings/Margins/fonts */
 .center-content {    
     margin: 0 auto;
+}
+
+.main-title-color {
+    color: #f5f5f5;
 }
 
 /* General paddings/Margins End */

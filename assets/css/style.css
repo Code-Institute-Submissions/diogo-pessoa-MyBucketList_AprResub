@@ -1,33 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Just+Another+Hand&family=Roboto:ital,wght@0,700;1,400&display=swap');
 
-.hand-font {
-    font-family: 'Gochi Hand';
-    font-size: 3rem;
-    text-align: center;
-    margin: auto;
-}
-
-.jumbotron {
-    background-image: 'images/notepad.png';
-}
-
-.notes {
-    background-image: image('assets/images/notepad.png');
+/* BucketList styling */
+.notepad-styling {
     background-color: #f5f5f5;
     width: 100%;
     margin: 0 auto;
     padding: 0;
     height: 100%;
 }
-h4 {
+.bucket-list-title {
     color: #cd0000;
     font-size: 2rem;
     letter-spacing: -2px;
     text-align: left;
     font-family: 'Gochi Hand';
 }
-.list {
+.list-items {
     color: #555;
     font-size: 1rem;
     padding: 0 !important;
@@ -35,7 +24,7 @@ h4 {
     font-family: 'Gochi Hand', sans-serif;
     border: 1px solid #dedede;
 }
-.list li {
+.list-items li {
     list-style: none;
     border-bottom: 1px dotted #ccc;
     text-indent: 25px;
@@ -43,7 +32,7 @@ h4 {
     padding: 10px;
     font-family: 'Gochi Hand', sans-serif;
 }
-.list li:hover {
+.list-items li:hover {
     background-color: #f0f0f0;
     -webkit-transition: all 0.2s;
     -moz-transition:    all 0.2s;
@@ -58,10 +47,19 @@ h4 {
     margin-left: 3rem;
 }
 
+/* BucketList styling END*/
+
+/* Send-email form  */
+
 #send-list-by-email {
     margin: auto;
 }
 
+/* Send-email form END */
+
+/* Footer */
 .footer-content {    
     margin: 0 auto;
 }
+
+/* Footer End */

@@ -1,108 +1,87 @@
 # My Bucket List
 
-**MyBucketList** 
+
+## Description
 
 site: [visit here](https://diogo-pessoa.github.io/MyBucketList/index.html)
 
-This is a fun project to create your bucket list and start planning your adventures. Make a list, tag places to go, and set a date to make it happen.
-
-## Project Work 
-
-Project Board & and User Stories on [Trello](https://trello.com/b/IdBaRAf3)
+This is place to reflect and create your bucket list. Start planning your adventures and think about think would you love to enjoy around the world. Make a list of things you like to do,  places to visit, and set a date to make it happen. Share your List with other Adventurous spirits out there. 
 
 ## UX
 
-The focus is to give the user a friendly and intuitive interface. Then free from distraction user has time to reflect on his list of Goals.
-The page provides a simple approach centred on form and BucketList
+### Theme and Typography
 
-### Form
+- Color Scheme and Styling of HTML Elements are from bootswatch theme [Journal](https://bootswatch.com/journal/)
+  
+Theme selected was based on minimal and clear visual. The goal is any distractions to the user during the thinking process. 
 
-- Action (goal), a text field. 
-- Location - should have a Map feature integrated to add a maps link to the list.
-- Calendar field - to feed the list with a date.
-
-### Bucket List
-Upon form submission, a new item is added.
-- User can remove items;
-- Re-order items on the list;
-Feature to send the list by e-mail is hidden from the user's view until there's at least one user-owned item on the list. 
-Send the list by e-mail is an additional feature. Hence the decision to hide the form and add the `Email me this list button`. If the user decides to send it by email, then clicking the button will show the form and auto-scroll to centre it. 
-
+- Bucket List section
+In this section the background is to vaguely remember a notepad, with the added hand-written front-style (Gochi Hand) from google fonts. To provide the user with a seamingly experience of writing it down o paper.
 ## Wireframes
 
-##### Mobile view
-![Mobile View](https://github.com/diogo-pessoa/MyBucketList/blob/master/readmeImageContent/Mobile_view.png)
+### Mobile view
 
-###### Desktop view
-![Desktop View](https://github.com/diogo-pessoa/MyBucketList/blob/master/readmeImageContent/Desktop_Version.png)
+- [Mobile View](https://github.com/diogo-pessoa/MyBucketList/blob/master/readmeImageContent/Mobile_view.png)
+
+### Desktop view
+
+- [Desktop View](https://github.com/diogo-pessoa/MyBucketList/blob/master/readmeImageContent/Desktop_Version.png)
 
 ## Features
+
+The focus is to give the user a friendly and intuitive interface. Then free from distraction user has time to reflect on his list of Goals.
+The page provides a simple approach centred on form and BucketList
 
 - Create a bucketList;
 - Add Items to list;
 - Remove items;
 - Re-order items on the list;
-- Feature to send the list by e-mail is hidden from the user's view until there's at least one user-owned item on the list. 
+- Hidden email fucntion to stay out of the user's view until he is ready to share the bucket list. 
 - Send the list by e-mail.
 - Inspirational quotes on Jumbotron
+
+
+
 
 ## Technologies Used
 
 This Project uses HTML5/CSS3 with dynamic content added with JavaScript. Frameworks and technologies used are:
 - [Bootstrap](https://getbootstrap.com/) - for it's handy Grid system 
 - [githubPages](https://pages.github.com/) - for the Deployment of this project unde my github-io space.
-- [JQuery](https://jquery.com/) - Interactive Javascript
-- [JQueryUI](https://learn.jquery.com/jquery-ui/)
+- [JQuery](https://jquery.com/) 
+  - Interactive Javascript
+- [JQueryUI](https://learn.jquery.com/jquery-ui/) 
+  - leveraging the `sortable` and `disableSelection` functions from jQuery use 
 - [emailJs](https://www.emailjs.com/)
+- [font awesome](https://fontawesome.com/) 
+  - Good selection of Icons.
+- [GitHub Pages](https://pages.github.com/) 
+    - Deploy project page
+- [balsamiq](https://balsamiq.com/)
+    - to Build wireframes
+- [Google Fonts](https://fonts.google.com/) 
+  - give nice effect of hand-written font on List  
 
-## Testing
-
-Manual site navigation on different screen sizes and browsers. 
-
-- Selected browsers for tests Firefox and Chrome. 
-- Screen sizes tested: 
-  - col-sm - Iphone6/7/8:  375px x667px
-  - col-md - Ipad: 768px x 1024px
-  - col-lg - Ipad: >960px x >600px
-Tested both on Browser developer tools & available devices. 
-- Test for alert in case of missing Action Item 
-  - Main form leave 'What's your goal' field empty and try to submit the form. that will raise an alert request for the user to review form content
-- Test for alert in case of missing Action Item. 
-  - The main form leaves the 'What's your goal' field empty and try to submit the form. that will raise an alert request for the user to review form content
-- Test Date field noticed it accepted dates in the past.
-  - Fix: Added `min` attribute to date input with moment date the user is accessing the page.
-  - [User story](https://trello.com/c/ZFZhuFir)
-- Test Auto-Scroll to email Detail form: 
-  - Once there's at least one item on BucketList: Click on the `Email me this List` button. The window should scroll to the bottom. Making the Email details form all visible. This is a natural touch on the mobile Version as the page scrolls down to show form, without user input. As opposed to showing half the form of the scroll doesn't happen.
-  - [User story](https://trello.com/c/7E3QR28A)
-- Test dynamic hiding of email related Elements, if the user cleans-up the list. 
-  - At least one item is added to the bucket list. Email button is displayed. At this stage, if all items are removed from the list button is hidden. 
-  - Second Case. The list has one item, the user clicks on `Email me this list`, page auto scrolls to the email form.If at this user cleans-up the bucket list. Page hides email form.
-- Footer links, both open on a separate tab.
-  - [User story](https://trello.com/c/0lkvynRe)
-- Discovered while testing setInterval wouldn't start because on the first request `window.localStorage` didn't have the quotes yet. Hence on the first visit quote would fallback to default. 
-  - removed if the condition that was wrapping the setDefaultInterval, now inside the function it triggers the fadeOut and replacement of the quote if localStorage has an array of Objects `quotes`.
-  - [User story](https://trello.com/c/ZQhhDu51)
-
-#### Static Content checks
-- [W3C HTML Validator](https://validator.w3.org/)
-- [W3C CSS Validator](http://jigsaw.w3.org/css-validator/validator$link)
-- [jshint](https://jshint.com/)
-- Chrome Developer tools lighthouse;
-
-## Deployment 
+## Deployment
 
 Site deployed using github-pages. 
 - visit Repository Settings
   - In Section `Github-pages`, enable it.
   - Set Branch to Master and path (root).
-![github-pages-image](https://github.com/diogo-pessoa/MyBucketList/blob/master/readmeImageContent/MybucketList-GH-pages.png)
+  - ![github-pages-image](https://github.com/diogo-pessoa/MyBucketList/blob/master/readmeImageContent/MybucketList-GH-pages.png)
 
 It can take a couple of minutes for content committed to master to be available.
 Github-pages [reference](https://pages.github.com/)
 
-## local development
-Code Editor [Vscode](https://code.visualstudio.com/) and Chrome browser with developer tools. All dynamic behaviour is browser-based.
+## local development 
+- Clone this Repository from github
+- Edit code with an editor of choice  ex:[Vscode](https://code.visualstudio.com/). 
+- To execute code locally open a web browser of choice (ex: Chrome) and use the schema `file://<path to local files/index.html> `.
+- Don't forget to reload page after changes on source code.
+ 
+## Testing
+
+- [testing.md](https://github.com/diogo-pessoa/MyBucketList/blob/master/TESTING.md)
 
 ## Credits
 
@@ -110,7 +89,6 @@ Code Editor [Vscode](https://code.visualstudio.com/) and Chrome browser with dev
 
 - bootstrap theme from: [bootswatch](https://bootswatch.com/journal/) under MIT license;
 - [fontawesome](https://fontawesome.com/);
-- [Bootstrap toast](https://getbootstrap.com/docs/4.2/components/toasts/);
 - Api collection for Inspirational quotes [philosophy-quotes-API](https://github.com/KaranDahiya/philosophy-quotes-API);
 
 ### Acknowledgements

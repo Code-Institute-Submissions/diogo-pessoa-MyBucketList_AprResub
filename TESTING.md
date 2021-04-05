@@ -5,23 +5,25 @@
 #### HTML validator
 - [W3C HTML Validator](https://validator.w3.org/)
 
-| File | Validator check | 
-|---|---|
-| index.html | ok |
+| File | Validator check | link |
+|---|---|---|
+| index.html | ok | [link](https://github.com/diogo-pessoa/MyBucketList/blob/master/readmeImageContent/index_validator.png) |
 
 #### CSS validator
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator)
    
-|File| Validator check|
+|File| Validator check|link|
 |---|---|
-| style.css | ok |
+| style.css | ok | [link](https://github.com/diogo-pessoa/MyBucketList/blob/master/readmeImageContent/Css_validator.png) |
 
 #### JsHint
 
 |File| Validator check|
 |---|---|
 | index.js | ok |
+
+- Using VS Code [JSHint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.jshint)
 
 ### Responsiveness
 
@@ -82,8 +84,6 @@ Tested both on Browser developer tools & available devices.
 
 - **User Story** as a Developer I want the Jumbotron to have a inspirational quote while user review his bucketList.
 - **Test** Once page loading is complete Jumbotron has a quotes and it rotates every 45 seconds
-
-
 
 ### Bug-fixes
 

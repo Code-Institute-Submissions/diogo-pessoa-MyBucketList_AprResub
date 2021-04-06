@@ -95,3 +95,7 @@ If condition checking before the object was stored locally on the browser. That 
 
 - **BUG** Because we hide the button and form for email interaction. A check is now needed if the form is already showing before  we can show the email button.
   - **Fix** fixed, by checking if form has hidden attribute before showing email Button again `if ($('#emailDetails').parent().attr('hidden')) { $('#send-list-by-email').removeAttr('hidden'); }`
+
+- **BUG** Forms didn't clean-up after submission, This caused the user need to remove the previous content from the form. Considering bucket list may have multiple items, this becomes cumbersome fast.
+  - **Fix** Added a Form `.reset()` on the submit event for boths email and bucket list Item forms. 
+  - **Test** Tested it by manually by filling the form and submitting both forms to confirm the fields were cleaned-up as expected.

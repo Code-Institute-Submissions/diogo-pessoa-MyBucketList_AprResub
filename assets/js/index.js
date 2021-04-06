@@ -11,7 +11,9 @@ $('#bucketlist-description').click(function(e) {
  * bucketList Form submit
  */
 
-$('#add-bucketlist-item-form').submit(function(e) {
+const ItemtoListForm = $('#add-bucketlist-item-form');
+
+ItemtoListForm.submit(function(e) {
   e.preventDefault();
   const bucketListItem = {
     'action': $("#bucketlist-item").val(),
@@ -20,6 +22,7 @@ $('#add-bucketlist-item-form').submit(function(e) {
   };
   if (bucketListItem.action) {
     addItemToBucketList(bucketListItem);
+    ItemtoListForm[0].reset(); // Reseting for after submission
   } else {
     alert('Missing an goal on this Item!');
   }
@@ -142,7 +145,10 @@ $('#send-list-by-email').on('click',function() {
 /**
  * Email form Submit handled here 
  */
-$('#emailDetails').submit(function(e) {
+
+ const sendEmailForm = $('#emailDetails');
+
+ sendEmailForm.submit(function(e) {
   e.preventDefault();
   const emailDetails = {
     'name': $("#username").val() || null,
@@ -153,6 +159,7 @@ $('#emailDetails').submit(function(e) {
     if (emailDetails.bucketList) {
       sendEmail(emailDetails);
       showToast();
+      sendEmailForm[0].reset(); // Reseting for after submission
     } else {
       //  email button is hidden, this condition should never be met.
       // still we refuse to email an empty list to user.

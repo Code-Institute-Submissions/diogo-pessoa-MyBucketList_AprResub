@@ -99,3 +99,8 @@ If condition checking before the object was stored locally on the browser. That 
 - **BUG** Forms didn't clean-up after submission, This caused the user need to remove the previous content from the form. Considering bucket list may have multiple items, this becomes cumbersome fast.
   - **Fix** Added a Form `.reset()` on the submit event for boths email and bucket list Item forms. 
   - **Test** Tested it by manually by filling the form and submitting both forms to confirm the fields were cleaned-up as expected.
+
+- **BUG** email template wasn't sending email template in HTML.
+  - **Fix** Template needed an extra bracket to send html templates ex: `{{{message}}}`
+  - **Test** submit email form and confirm html template on email body
+    - reference [emailjs](https://www.emailjs.com/docs/user-guide/dynamic-variables-templates/)

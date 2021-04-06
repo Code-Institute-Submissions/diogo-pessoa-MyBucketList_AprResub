@@ -123,7 +123,7 @@ function parseBucketList() {
   let order = 0;
   for (const liElement of htmlBucketList) {
     if (liElement.innerText) {
-      stringBucketList += `${++order} - ${liElement.innerText}; `;
+      stringBucketList += `<li>${++order}. ${liElement.innerText}</li>`;
     }
   }
   return stringBucketList;

@@ -38,9 +38,8 @@ The page provides a simple approach centred on form and BucketList
 - Re-order items on the list;
 - Hidden email fucntion to stay out of the user's view until he is ready to share the bucket list. 
 - Send the list by e-mail.
+  - [email template](https://github.com/diogo-pessoa/MyBucketList/blob/master/emailTemplate/index.htm)
 - Inspirational quotes on Jumbotron
-
-
 
 
 ## Technologies Used

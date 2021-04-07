@@ -84,6 +84,12 @@ Tested both on Browser developer tools & available devices.
 - **User Story** as a Developer I want the Jumbotron to have a inspirational quote while user review his bucketList.
 - **Test** Once page loading is complete Jumbotron has a quotes and it rotates every 45 seconds
 
+- **User Story** As a User I want to keep my list in case of a page reload.
+  - **Test** After adding at least one object to the list, If I reload my page, My list content is preserved 
+  - **Fix** When Appending the Item to the list (on form submission) we can create an object in the localStorage to persist data on user's browser. Then on page loading, we check if there's content in said obejct and Add to Bucket HTML element.
+  
+- **User Story** As a User when I delete one object from my BucketList, I want it to be removed from any persistence, So that the Page Reload does not show an outdated list. 
+
 ### Bug-fixes
 
 - **BUG** On the first site visit quotes do not rotate.

@@ -22,6 +22,7 @@ ItemtoListForm.submit(function(e) {
   };
   if (bucketListItem.action) {
     addItemToBucketList(bucketListItem);
+    addBucketItemToLocalStorage(bucketListItem);
     ItemtoListForm[0].reset(); // Reseting for after submission
   } else {
     alert('Missing an goal on this Item!');
@@ -252,3 +253,33 @@ setInterval(function() {
   }
 },30000);
 
+// Persisting Items on BucketList on LocalStorage START
+
+/**
+ * append's Item to bucketList localStorage or, create new bucketList item as Array.
+ * @param {Object} bucketListItem '{ action: "climb a mountain", location: "Everest", datePlanned: null }'
+ * 
+ * @returns undefined
+ */
+function addBucketItemToLocalStorage(bucketListItem) {
+
+  const storedBucketList = JSON.parse(localStorage.getItem("bucketList"));
+  if (!storedBucketList) {
+    localStorage.setItem("bucketList", JSON.stringify([bucketListItem]));  
+  } else {
+    storedBucketList.push(bucketListItem);
+    localStorage.setItem("bucketList", JSON.stringify(storedBucketList));  
+  }
+}
+
+// Load BucketList from Local Storage if there's content
+
+if (window.localStorage.getItem('bucketList')) {
+  const bucketListFromStorage = JSON.parse(window.localStorage.getItem('bucketList'));
+  for (let i = 0; i < bucketListFromStorage.length; i++) {
+    addItemToBucketList(bucketListFromStorage[i]); 
+  }
+}
+
+
+// Persisting Items on BucketList on LocalStorage END

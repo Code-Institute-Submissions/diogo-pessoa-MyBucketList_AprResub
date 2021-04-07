@@ -41,7 +41,6 @@ The page provides a simple approach centred on form and BucketList
   - [email template](https://github.com/diogo-pessoa/MyBucketList/blob/master/emailTemplate/index.htm)
 - Inspirational quotes on Jumbotron
 
-
 ## Technologies Used
 
 This Project uses HTML5/CSS3 with dynamic content added with JavaScript. Frameworks and technologies used are:
@@ -90,9 +89,13 @@ Github-pages [reference](https://pages.github.com/)
 - [fontawesome](https://fontawesome.com/);
 - Api collection for Inspirational quotes [philosophy-quotes-API](https://github.com/KaranDahiya/philosophy-quotes-API);
 
+
+
 ### Acknowledgements
 
 The official [JQuery documentation](https://api.jquery.com/).
+### Code Sniippets
 - Notepad css background used in List Section is inspired in [css_tricks](https://css-tricks.com/how-to-create-a-notebook-design-with-css/);
 - animation to Fade-in Quotes [StackOverflow](https://stackoverflow.com/questions/5248721/jquery-replacewith-fade-animate)
+- quick Random String generator from [attacomsian.com](attacomsian.com/blog/javascript-generate-random-string)
  

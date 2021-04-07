@@ -89,6 +89,8 @@ Tested both on Browser developer tools & available devices.
   - **Fix** When Appending the Item to the list (on form submission) we can create an object in the localStorage to persist data on user's browser. Then on page loading, we check if there's content in said obejct and Add to Bucket HTML element.
   
 - **User Story** As a User when I delete one object from my BucketList, I want it to be removed from any persistence, So that the Page Reload does not show an outdated list. 
+  - **Feature** Injects a hidden `id` to each object appended to BucketList `<li>` element. When clicking the Remove button New Function call will parse this id and update the `bucketList` localStorage
+  - **Test** Add a few items to BucketList, reload page to confirm they're storaged locally. Execute a Delete by clicking on x. Reload page again and confirm Item is not in the list anymore. 
 
 ### Bug-fixes
 

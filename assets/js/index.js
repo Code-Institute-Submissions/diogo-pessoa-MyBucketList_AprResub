@@ -18,7 +18,8 @@ ItemtoListForm.submit(function(e) {
   const bucketListItem = {
     'action': $("#bucketlist-item").val(),
     'location': $("#location").val() || null,
-    'datePlanned': $("#date-planned").val() || null
+    'datePlanned': $("#date-planned").val() || null,
+    'id': `${Math.random().toString().substr(2, 8)}`
   };
   if (bucketListItem.action) {
     addItemToBucketList(bucketListItem);
@@ -48,6 +49,7 @@ function addItemToBucketList(bucketListItem) {
     const DateForAction = formatDate(bucketListItem.datePlanned);
     newItem += `, ${DateForAction}`;
   }
+  newItem += `<span hidden >${bucketListItem.id}</span>`;
   newItem += `<i class="removeListItem fa fa-times-circle"></i></li>`;
   /* remove first sample Item */
   removeEmptyLines();
@@ -87,6 +89,14 @@ function formatDate(plannedDate) {
 $('ul').on('click','.removeListItem',function() {
   // removes li element from bucketList
   $(this).parent().remove();
+  
+  /**
+   * In order to make it simpler to remove items, there's a hidden span element with the item id on each bucketlist item <li> element
+   * to Then pass this on to locaStorage removal below
+  // $(this).siblings('span').text().trim() to remove any potential empty spaces
+   */
+  // remove from Storaged List Item
+  removeBucketItemFromLocalStorage($(this).siblings('span').text().trim());
   // hides email form and button
   if ($('#bucket-list').children('li').length == 0) {
     $('#send-list-by-email').attr('hidden','');
@@ -270,6 +280,21 @@ function addBucketItemToLocalStorage(bucketListItem) {
     storedBucketList.push(bucketListItem);
     localStorage.setItem("bucketList", JSON.stringify(storedBucketList));  
   }
+}
+
+/**
+ * Removes Item from localStorageBucketList
+ * Creates new List excluding item to be removed from storage
+ */
+function removeBucketItemFromLocalStorage(bucketListItemId) {
+  const storedBucketList = JSON.parse(localStorage.getItem("bucketList"));
+  const newStoredBucketList = [];
+  for (let i = 0; i < storedBucketList.length; i++) {
+    if (storedBucketList[i].id !== bucketListItemId) {
+      newStoredBucketList.push(storedBucketList[i]);
+    }
+  }
+  localStorage.setItem("bucketList", JSON.stringify(newStoredBucketList));   
 }
 
 // Load BucketList from Local Storage if there's content

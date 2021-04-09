@@ -105,6 +105,10 @@ Tested both on Browser developer tools & available devices.
   - **Fix** added some inline css styling to email template
   - **Test** Send email After template change and confirm styling is working as expected and that motivation field breaks down nicely on list of Goals
 
+- **User Story** On Send email Form add a button to hide email form again, if I'm still creating the list. To avoid space while I'm still working on my list. 
+  - **Fix** On event handler for `email me this list` button added if statement to check if form is hidden. If that's the case, transform button in to `Hide this form`. In case of event click event for this button if form is showing, hides for again, and reverse button text.
+  - **Test** Once there's at least one item on list, Click on `email me this list` button. Email form shows and button text is changed to `Hide This form`. Upon new click, email form is hidden again and text reversed to original content
+
 ### Bug-fixes
 
 - **BUG** On the first site visit quotes do not rotate.

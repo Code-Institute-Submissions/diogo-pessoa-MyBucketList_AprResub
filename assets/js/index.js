@@ -157,12 +157,19 @@ function parseBucketList() {
  * 
  */
 $('#send-list-by-email').on('click',function() {
-  $('#emailDetails').parent().removeAttr('hidden');
-  $(this).attr('hidden','');
-  //scroll to form
-  $('html').stop().animate({
-    'scrollTop': $('#emailDetails').offset().top
-  },800,'swing');
+  if($('#emailDetails').parent().attr('hidden')){
+    $('#emailDetails').parent().removeAttr('hidden');
+    $(this).text('Hide email form')
+    //scroll to form
+    $('html').stop().animate({
+      'scrollTop': $('#send-list-by-email').offset().top
+    },800,'swing');
+  } else {
+    $('#emailDetails').parent().attr('hidden','');
+    $(this).text('Email me this list');
+  }
+  
+  
 });
 
 /**
@@ -315,6 +322,4 @@ if (window.localStorage.getItem('bucketList')) {
     addItemToBucketList(bucketListFromStorage[i]); 
   }
 }
-
-
 // Persisting Items on BucketList on LocalStorage END

@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Email Template</title>
-</head>
-<body>
-  <p>Hello {{to_name}},</p>
-<p>First step is done! Your Bucket list is ready, Now it is up to you to take on new adventures.</p>
-<p>{{{message}}}</p>
-<p>Best wishes,</p>
-<p>From <a href="https://diogo-pessoa.github.io/MyBucketList/index.html">MyBucketList</a></p>
-</body>
-</html>
+<p><span style="font-family: 'comic sans ms', sans-serif;">Hello {{to_name}},</span></p>
+<p><span style="font-family: 'comic sans ms', sans-serif;">Your Bucket list is ready! Now it is up to you to take on fresh adventures.</span></p>
+<p><span style="font-family: 'comic sans ms', sans-serif;"><!-- <ul>{{{message}}}</ul> --></span></p>
+<h4 class="bucket-list-title my-4"><span style="font-family: 'comic sans ms', sans-serif; color: #e03e2d;">My Bucket List:</span></h4>
+<ul style="list-style-type: none; font-family: 'comic sans ms', sans-serif;">{{{message}}}</ul>
+<p><span style="font-family: 'comic sans ms', sans-serif;">Best wishes,</span></p>
+<p class="bg-primary primary-color"><span style="font-family: 'comic sans ms', sans-serif;">List created using <a href="https://diogo-pessoa.github.io/MyBucketList/index.html">MyBucketList</a></span></p>

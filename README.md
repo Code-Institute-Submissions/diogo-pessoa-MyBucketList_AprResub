@@ -39,7 +39,13 @@ The page provides a simple approach centred on form and BucketList
 - Hidden email fucntion to stay out of the user's view until he is ready to share the bucket list. 
 - Send the list by e-mail.
   - [email template](https://github.com/diogo-pessoa/MyBucketList/blob/master/emailTemplate/index.htm)
-- Inspirational quotes on Jumbotron
+  - [sample email](https://github.com/diogo-pessoa/MyBucketList/blob/master/emailTemplate/emailBody.png)
+- Inspirational quotes under Add your goal Form
+
+### Features left to implement
+
+- On Send email Form add a button to hide email form again, if I'm still creating the list. To avoid space while I'm still working on my list. 
+- Email form currently sends email to one destination at a time. This can be extended to accept a list of email. Then we can add a bucketList buddy when sending this list ourselves
 
 ## Technologies Used
 

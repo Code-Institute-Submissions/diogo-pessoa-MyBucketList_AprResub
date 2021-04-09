@@ -143,8 +143,10 @@ function parseBucketList() {
   const htmlBucketList = $('#bucket-list').children('li');
   let order = 0;
   for (const liElement of htmlBucketList) {
-    if (liElement.innerText) {
-      stringBucketList += `<li>${++order}. ${liElement.innerText}</li>`;
+    $(liElement).children('span').remove()
+    $(liElement).children('i').remove()
+    if (liElement.innerHTML) {
+      stringBucketList += `<li>${++order}. ${liElement.innerHTML}</li>`;
     }
   }
   return stringBucketList;
@@ -188,9 +190,7 @@ $('#send-list-by-email').on('click',function() {
     }
 
   } else {
-    const message = 'Check your added details';
-    const id = '#emailDetails';
-    alert('missing either username or email ');
+    alert('missing either username or email');
   }
 });
 
@@ -266,7 +266,7 @@ $(parseQuoteToParagraph()).appendTo('#quotes');
 setInterval(function() {
   if (window.localStorage.getItem('quotes').length > 0) {
     $('#quotes').fadeOut("slow",function() {
-      var div = $("#quotes").hide();
+      $("#quotes").hide();
       $('#quotes').children('blockquote').replaceWith(parseQuoteToParagraph());
       $('#quotes').fadeIn("slow");
     });

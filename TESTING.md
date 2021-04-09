@@ -101,6 +101,9 @@ Tested both on Browser developer tools & available devices.
     - Confirm Click to delete element from List still works. 
     - No regression found
 
+- **Task** Add some styling to email template
+  - **Fix** added some inline css styling to email template
+  - **Test** Send email After template change and confirm styling is working as expected and that motivation field breaks down nicely on list of Goals
 
 ### Bug-fixes
 

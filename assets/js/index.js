@@ -19,7 +19,8 @@ ItemtoListForm.submit(function(e) {
     'action': $("#bucketlist-item").val(),
     'location': $("#location").val() || null,
     'datePlanned': $("#date-planned").val() || null,
-    'id': `${Math.random().toString().substr(2, 8)}`
+    'id': `${Math.random().toString().substr(2, 8)}`,
+    'motivation': $("#motivation-for-action").val() || null
   };
   if (bucketListItem.action) {
     addItemToBucketList(bucketListItem);
@@ -50,7 +51,16 @@ function addItemToBucketList(bucketListItem) {
     newItem += `, ${DateForAction}`;
   }
   newItem += `<span hidden >${bucketListItem.id}</span>`;
-  newItem += `<i class="removeListItem fa fa-times-circle"></i></li>`;
+  newItem += `<i class="removeListItem fa fa-times-circle"></i>`;
+
+  /* Append paragraph with motivation for goal */
+  if (bucketListItem.motivation) {
+    newItem += `<br><p>${bucketListItem.motivation}</p>`
+  }
+
+  // close list element
+  newItem += `</li>`
+
   /* remove first sample Item */
   removeEmptyLines();
   /* Add Item to list */

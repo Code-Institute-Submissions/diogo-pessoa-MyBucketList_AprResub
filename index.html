@@ -189,17 +189,22 @@
                     class="my-4">
                     <fieldset>
                         <div class="form-group">
+                            <label for="bucketlist-item" class="col-form-label">Name your goal:</label>
                             <input type="text" class="form-control" id="bucketlist-item"
                                 placeholder="What are your goals? ex: fly a plane">
                         </div>
                         <div class="form-group">
-                            <label for="location">Location</label>
-                            <input type="text" class="form-control-sm d-sm-block d-md-inline" id="location"
+                            <label for="location" class="col-form-label">Location</label>
+                            <input type="text" class="form-control-sm d-md-inline" id="location"
                                 placeholder="Have a location in mind?">
-                            <label for="date-planned">Set a date?</label>
-                            <input class="form-control-sm d-sm-block d-sm-block d-md-inline" type="date"
+                            <label for="date-planned" class="col-form-label">Set a date</label>
+                            <input class="form-control-sm d-sm-block d-md-inline" type="date"
                                 id="date-planned" name="date-planned">
                         </div>
+                        <div class="form-group">
+                            <label for="motivation-for-action" class="col-form-label">What's your motivation?</label>
+                            <pwa-container-wrapper><pwa-container data-uid="pwa_3D91DE19F2AC6900B7D40D57FB93BD8B" class="pwa-container " style="overflow: hidden; position: absolute; box-sizing: border-box; pointer-events: none; margin: 0px; padding: 6px 16px; width: 540px; height: 86px; top: 549.75px; left: 0.5px; z-index: 1;"><pwa style="position: absolute; top: 99999px; left: 999999px; width: 1px; height: 1px;"></pwa></pwa-container></pwa-container-wrapper><pwa-sync style="opacity: 0 !important; position: absolute; box-sizing: border-box; pointer-events: none; border-width: 1px !important; border-style: solid !important; border-color: rgb(206, 212, 218) !important; border-radius: 4px !important; color: rgb(73, 80, 87) !important; background: none 0% 0% / auto repeat scroll padding-box padding-box rgb(255, 255, 255) !important; padding: 6px 16px; text-align: start !important; overflow-wrap: break-word !important; z-index: 1; overflow: hidden; margin: 0px; top: 549.75px; left: 0.5px; width: 540px; height: 86px; white-space: pre-wrap !important;"></pwa-sync><textarea class="form-control" id="motivation-for-action" rows="3" pwa2-uuid="EDITOR-AD9-59B-FF944-8DC" pwa-fake-editor="" spellcheck="false" style="position: relative !important; z-index: auto !important;"></textarea><pwa-editor-bar-cnt><pwa-editor-bar pwa2-uuid="EDITOR-AD9-59B-FF944-8DC" class="bar-full invisible" style="right: -534px !important; bottom: 6px !important;"><pwa-editor-bar-status class="checked" data-pwa-errors-count="0"></pwa-editor-bar-status><pwa-editor-bar-status class="pending"></pwa-editor-bar-status><pwa-editor-bar-status class="loggedout visible"></pwa-editor-bar-status><pwa-editor-bar-status class="network-offline"></pwa-editor-bar-status><pwa-editor-bar-status class="extension-offline"></pwa-editor-bar-status><pwa-editor-bar-status class="site-disabled"></pwa-editor-bar-status><pwa-editor-bar-panel><pwa-editor-bar-panel-btn class="switch-off visible" title="Turn off ProWritingAid for this page"></pwa-editor-bar-panel-btn><pwa-editor-bar-panel-btn class="switch-on" title="Turn on ProWritingAid for this page"></pwa-editor-bar-panel-btn><pwa-editor-bar-panel-btn class="full-editor visible" title="Open this text in the full ProWritingAid editor"></pwa-editor-bar-panel-btn><pwa-editor-bar-panel-btn class="editor-disabled" title="Sorry, for technical reasons we can't support the full editor here"></pwa-editor-bar-panel-btn><pwa-editor-bar-panel-btn class="loggedout visible" title="Please log in or sign up for full access"></pwa-editor-bar-panel-btn><pwa-editor-bar-panel-btn class="network-offline" title="Network problems"></pwa-editor-bar-panel-btn><pwa-editor-bar-panel-btn class="extension-offline" title="ProWritingAid extension is off. Please reload this browser tab and dont forget to save you work before reload!"></pwa-editor-bar-panel-btn></pwa-editor-bar-panel></pwa-editor-bar></pwa-editor-bar-cnt>
+                          </div>
                         <button type="submit" class="btn btn-primary btn-lg btn-block">Add to bucket
                             list</button>
                     </fieldset>
@@ -219,12 +224,12 @@
                 </div>
                 <form id='emailDetails'>
                     <div class="form-group">
-                        <label for="username">YourName</label>
+                        <label for="username" class="col-form-label">YourName</label>
                         <input type="text" class="form-control" id="username" placeholder="Name"
                             style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIUlEQVQ4EX2TOYhTURSG87IMihDsjGghBhFBmHFDHLWwSqcikk4RRKJgk0KL7C8bMpWpZtIqNkEUl1ZCgs0wOo0SxiLMDApWlgOPrH7/5b2QkYwX7jvn/uc//zl3edZ4PPbNGvF4fC4ajR5VrNvt/mo0Gr1ZPOtfgWw2e9Lv9+chX7cs64CS4Oxg3o9GI7tUKv0Q5o1dAiTfCgQCLwnOkfQOu+oSLyJ2A783HA7vIPLGxX0TgVwud4HKn0nc7Pf7N6vV6oZHkkX8FPG3uMfgXC0Wi2vCg/poUKGGcagQI3k7k8mcp5slcGswGDwpl8tfwGJg3xB6Dvey8vz6oH4C3iXcFYjbwiDeo1KafafkC3NjK7iL5ESFGQEUF7Sg+ifZdDp9GnMF/KGmfBdT2HCwZ7TwtrBPC7rQaav6Iv48rqZwg+F+p8hOMBj0IbxfMdMBrW5pAVGV/ztINByENkU0t5BIJEKRSOQ3Aj+Z57iFs1R5NK3EQS6HQqF1zmQdzpFWq3W42WwOTAf1er1PF2USFlC+qxMvFAr3HcexWX+QX6lUvsKpkTyPSEXJkw6MQ4S38Ljdbi8rmM/nY+CvgNcQqdH6U/xrYK9t244jZv6ByUOSiDdIfgBZ12U6dHEHu9TpdIr8F0OP692CtzaW/a6y3y0Wx5kbFHvGuXzkgf0xhKnPzA4UTyaTB8Ph8AvcHi3fnsrZ7Wore02YViqVOrRXXPhfqP8j6MYlawoAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
                     </div>
                     <div class="form-group">
-                        <label for="inputEmail">Email address</label>
+                        <label for="inputEmail" class="col-form-label">Email address</label>
                         <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
                             placeholder="Enter valid email: email@example.com"
                             style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">

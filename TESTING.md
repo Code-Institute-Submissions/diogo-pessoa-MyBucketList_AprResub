@@ -92,6 +92,16 @@ Tested both on Browser developer tools & available devices.
   - **Feature** Injects a hidden `id` to each object appended to BucketList `<li>` element. When clicking the Remove button New Function call will parse this id and update the `bucketList` localStorage
   - **Test** Add a few items to BucketList, reload page to confirm they're storaged locally. Execute a Delete by clicking on x. Reload page again and confirm Item is not in the list anymore. 
 
+- **User Story** As a user I would like to add a paragraph with what motivated me to choose each goal to my list
+  - **Feature** Added new field to `motivation` to bucket list Item form, Included paragraph to Bucket list element `<li>`
+  - **Test** 
+    - Tested on different screen to make sure on each resizing the paragraph breaksdown and stays inside list element (is does not overflow). 
+    - Reload page and confirm new field is properly stored on window local storage and loads correctly once page reload is complete. 
+    - Confirm Re-order of fields work after the new movivation field is included
+    - Confirm Click to delete element from List still works. 
+    - No regression found
+
+
 ### Bug-fixes
 
 - **BUG** On the first site visit quotes do not rotate.

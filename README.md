@@ -102,8 +102,12 @@ Github-pages [reference](https://pages.github.com/)
 ### Acknowledgements
 
 The official [JQuery documentation](https://api.jquery.com/).
-### Code Sniippets
+### Code Snippets
 - Notepad css background used in List Section is inspired in [css_tricks](https://css-tricks.com/how-to-create-a-notebook-design-with-css/);
 - animation to Fade-in Quotes [StackOverflow](https://stackoverflow.com/questions/5248721/jquery-replacewith-fade-animate)
 - quick Random String generator from [attacomsian.com](attacomsian.com/blog/javascript-generate-random-string)
+- Touch Event support thread and snippet of code sourced from [StackOverFlow Answer](https://stackoverflow.com/questions/5186441/javascript-drag-and-drop-for-touch-devices/6362527#6362527)
+- [Jquery Ui drag and hold](https://stackoverflow.com/questions/34027761/jquery-ui-sortable-hold-and-drag-for-mobile)
+- modified version of [touch-punch](https://github.com/nobitagit/jquery-ui-touch-punch) to fix touch problem for input and text area
+- Input can't get focus fix from Github [Issue](https://github.com/furf/jquery-ui-touch-punch/issues/233)
  

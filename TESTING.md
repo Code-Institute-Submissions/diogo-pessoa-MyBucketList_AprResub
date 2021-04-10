@@ -125,3 +125,20 @@ If condition checking before the object was stored locally on the browser. That 
   - **Fix** Template needed an extra bracket to send html templates ex: `{{{message}}}`
   - **Test** submit email form and confirm html template on email body
     - reference [emailjs](https://www.emailjs.com/docs/user-guide/dynamic-variables-templates/)
+
+- **BUG** Unable to Sortable/Draggable BucketList iteam on mobile view of page. 
+  - **Implement Touch event for mobile view**
+    - Added new library `touch-punch` to support **touch** events and allow to drag items from list. 
+       1. Once new events are loaded hold element with touch allows for moving them up and down the list.
+          1.1 This uncovered other features that needed to be implemented. Listed on the next steps.
+       2. Added library from custom Repository [Touch-Punch nobitagit](https://github.com/nobitagit/jquery-ui-touch-punch) to keep support for focus on textarea and input
+       3. Custom version fo `touch-punch` mentioned above also helped with functionaliy to event Listener `click` to remove items from bucketList.
+       4. Added preventDefault inside mouseStart on `touchStart` to avoid page scrolling when dragging element in list.
+          4.1 [Disabling scrolling](https://stackoverflow.com/questions/16348031/disable-scrolling-when-touch-moving-certain-element#17159809) 
+
+  - **Test** 
+    1. Load page on mobile screen, Confirm bucket List has at least two objects, touch on item on list and move them up or down the list. 
+       1.1 Once all implementation above was concluded I was able to re-order list without paging scrolling when I'm dragging items around the List. 
+    2. Test focus on text area on mobile screen. Navigate to form on mobile version of page. touch on input and textarea fields and confirm focus.
+    3. Navigate to BucketList on mobile version of page. Confirm list has at least one object, touch on remove (x icon) and item is excluded from list. 
+    4. As mentioned on Item 1 once fix is in place, user is able to drag items and re-order list without page moving around.

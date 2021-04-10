@@ -5,18 +5,18 @@
 
 site: [visit here](https://diogo-pessoa.github.io/MyBucketList/index.html)
 
-This is place to reflect and create your bucket list. Start planning your adventures and think about think would you love to enjoy around the world. Make a list of things you like to do,  places to visit, and set a date to make it happen. Share your List with other Adventurous spirits out there. 
+This is a place to reflect and create your bucket list. Start planning your adventures and think about think  you would love to do around the world. Make a list of places you want to know, things you want to try, and set a date to make it happen. Share your List with other Adventurous spirits out there. 
 
 ## UX
 
 ### Theme and Typography
 
-- Color Scheme and Styling of HTML Elements are from bootswatch theme [Journal](https://bootswatch.com/journal/)
+- Colour Scheme and Styling of HTML Elements are from bootswatch theme [Journal](https://bootswatch.com/journal/)
   
 Theme selected was based on minimal and clear visual. The goal is any distractions to the user during the thinking process. 
 
 - Bucket List section
-In this section the background is to vaguely remember a notepad, with the added hand-written front-style (Gochi Hand) from google fonts. To provide the user with a seamingly experience of writing it down o paper.
+In this section the background is to vaguely remember a notepad, with the added hand-written front-style (Gochi Hand) from Google fonts. To play with the idea of a hand-written  list.
 ## Wireframes
 
 ### Mobile view
@@ -29,7 +29,7 @@ In this section the background is to vaguely remember a notepad, with the added 
 
 ## Features
 
-The focus is to give the user a friendly and intuitive interface. Then free from distraction user has time to reflect on his list of Goals.
+The focus is to give the user a friendly and intuitive interface. Then free from distraction the user has time to reflect on his list of Goals.
 The page provides a simple approach centred on form and BucketList
 
 - Create a bucketList;
@@ -42,20 +42,20 @@ The page provides a simple approach centred on form and BucketList
   - [sample email](https://github.com/diogo-pessoa/MyBucketList/blob/master/emailTemplate/emailBody.png)
 - Inspirational quotes under Add your goal Form
 
-- On Send email Form add a button to hide email form again, if I'm still creating the list. To avoid space while I'm still working on my list. 
+- On Send email Form added a button to hide email form again, if I'm still creating the list. To avoid space while I'm still working on my list. 
 
 ### Features left to implement
 
 
-- Email form currently sends email to one destination at a time. This can be extended to accept a list of email. Then we can add a bucketList buddy when sending this list ourselves
+- Email form currently sends email to one destination at a time. This can be extended to accept a list of email. Then we can add a bucket list buddy when sending this list ourselves
 
 ## Technologies Used
 
 This Project uses HTML5/CSS3 with dynamic content added with JavaScript. Frameworks and technologies used are:
-- [Bootstrap](https://getbootstrap.com/) - for it's handy Grid system 
-- [githubPages](https://pages.github.com/) - for the Deployment of this project unde my github-io space.
+- [Bootstrap](https://getbootstrap.com/) - for all the functionalities provided and  great Grid system 
+- [githubPages](https://pages.github.com/) - for the Deployment of this project under my github-io space.
 - [JQuery](https://jquery.com/) 
-  - Interactive Javascript
+  - Interactive JavaScript
 - [JQueryUI](https://learn.jquery.com/jquery-ui/) 
   - leveraging the `sortable` and `disableSelection` functions from jQuery use 
 - [emailJs](https://www.emailjs.com/)
@@ -80,8 +80,8 @@ It can take a couple of minutes for content committed to master to be available.
 Github-pages [reference](https://pages.github.com/)
 
 ## local development 
-- Clone this Repository from github
-- Edit code with an editor of choice  ex:[Vscode](https://code.visualstudio.com/). 
+- Clone this Repository from GitHub
+- Edit code with an editor of choice  ex:[VS Code](https://code.visualstudio.com/). 
 - To execute code locally open a web browser of choice (ex: Chrome) and use the schema `file://<path to local files/index.html> `.
 - Don't forget to reload page after changes on source code.
  
@@ -93,9 +93,9 @@ Github-pages [reference](https://pages.github.com/)
 
 ### Content
 
-- bootstrap theme from: [bootswatch](https://bootswatch.com/journal/) under MIT license;
+- bootstrap theme from: [bootswatch](https://bootswatch.com/journal/) under MIT licence;
 - [fontawesome](https://fontawesome.com/);
-- Api collection for Inspirational quotes [philosophy-quotes-API](https://github.com/KaranDahiya/philosophy-quotes-API);
+- API collection for Inspirational quotes [philosophy-quotes-API](https://github.com/KaranDahiya/philosophy-quotes-API);
 
 
 
@@ -103,11 +103,10 @@ Github-pages [reference](https://pages.github.com/)
 
 The official [JQuery documentation](https://api.jquery.com/).
 ### Code Snippets
-- Notepad css background used in List Section is inspired in [css_tricks](https://css-tricks.com/how-to-create-a-notebook-design-with-css/);
+- Notepad CSS background used in List Section is inspired in [css_tricks](https://css-tricks.com/how-to-create-a-notebook-design-with-css/);
 - animation to Fade-in Quotes [StackOverflow](https://stackoverflow.com/questions/5248721/jquery-replacewith-fade-animate)
 - quick Random String generator from [attacomsian.com](attacomsian.com/blog/javascript-generate-random-string)
 - Touch Event support thread and snippet of code sourced from [StackOverFlow Answer](https://stackoverflow.com/questions/5186441/javascript-drag-and-drop-for-touch-devices/6362527#6362527)
-- [Jquery Ui drag and hold](https://stackoverflow.com/questions/34027761/jquery-ui-sortable-hold-and-drag-for-mobile)
+- [Jquery UI drag and hold](https://stackoverflow.com/questions/34027761/jquery-ui-sortable-hold-and-drag-for-mobile)
 - modified version of [touch-punch](https://github.com/nobitagit/jquery-ui-touch-punch) to fix touch problem for input and text area
-- Input can't get focus fix from Github [Issue](https://github.com/furf/jquery-ui-touch-punch/issues/233)
- 
+- Input can't get focus fix from GitHub [Issue](https://github.com/furf/jquery-ui-touch-punch/issues/233)
